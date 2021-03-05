@@ -36,16 +36,60 @@
 
 <body>
     <header>
-        <div class="NOM">Antoine de Pertat </div>
-        <p class="photo">
-            <a href="antoine_de_pertat.jpg"><img src="antoine_de_pertat_mini.jpg" alt="Antoine de Pertat" title="Cliquez pour agrandir" /></a>
-        </p>
-        <div class="intro">J'ai cr&eacute&eacute cette page pour me pr&eacutesenter de fa&ccedilon originale! </div>
-        <div class="separateur"><img src="separateur.png"></div>
+        <section class="top-header">
+            <div class="logo">
+                <!-- link to réservia official website -->
+                <a href=#>
+                    <img src="images/logo/Reservia@3x.png" alt="Réservia">
+                </a>
+            </div>
+            <nav>
+                <div class="Hébergement">
+                    <!-- Anchor to Hébergements -->
+                    <a href="#bloc-hébergements">
+                        <p>H&eacutebergements</p>
+                    </a>
+                </div>
+                <div class="Activités">
+                    <!-- Anchor to Hébergements -->
+                    <a href="#bloc-activités">
+                        <p>Activit&eacutes</p>
+                    </a>
+                </div>
+                <div class="S'inscrire">
+                    <!-- link to sign up form -->
+                    <a href="#">
+                        <p>S'inscrire</p>
+                    </a>
+                </div>
+            </nav>
+        </section>
+        <Aside class=Aside-header>
+            <div id="titre-header">
+                <h1>Trouvez votre h&eacutebergement pour des vacances de r&ecircves</h1>
+                </br>
+                <p>En plein centre ville ou en pleine nature</p>
+            </div class="city-selector">
+            <form class="cityselector" action="/action_page.php" style="margin:auto;max-width:200px">
+                <input type="text" placeholder="Marseille, France" name="search">
+                <i class="fas fa-map-marker-alt"></i><button name="Rechercher" type="submit" value="Rechercher">Rechercher</button>
+            </form>
+            <div id="filters">
+                <p>Filtres</p>
+                <!-- filters with javascript functions. Not available here -->
+                <i class="fas fa-money-bill-wave"></i><button class="btn" onclick="filterSelection('economique')">&Eacuteconomique</button>
+                <i class="fas fa-child"></i><button class="btn" onclick="filterSelection('familial')">Familial</button>
+                <i class="fas fa-heart"></i></i><button class="btn" onclick="filterSelection('romantique')">Romantique</button>
+                <i class="fas fa-dog"></i><button class="btn" onclick="filterSelection('animaux-autorises')">Animaux autoris&eacutes</button>
+            </div>
+            <div>
+                <!--"plus de xxx logements disponibles = javascript"-->
+                <i class="fas fa-info"></i>
+                <p>Plus de 500 logements sont disponibles dans cette ville</p>
+            </div>
+        </Aside>
     </header>
-    <nav>
 
-    </nav>
     <section id="conteneur1">
 
     </section>
@@ -58,17 +102,10 @@
 
 
     <footer>
-        <div id="conteneur5">
+        <div id="conteneur3">
 
         </div>
 
-        <p class="Contacts">
-            <a href="https://www.linkedin.com/in/antoine-de-pertat-0-631819373-" target="_blank"><img id="Linkedin" src="LinkedIn.png" alt="LinkedIn" /></a>
-            <a href="https://www.instagram.com/antoine.d.p/?hl=en" target="_blank"><img id="Instagram" src="Instagram.png" alt="Instagram" /></a>
-            <a href="mailto:depertat.antoine@gmail.com" target="_blank"><img id="Email" src="Email.png" alt="Email" /></a>
-        </p>
-        <div class="separateur5"><img src="separateur.png"></div>
-        </div>
     </footer>
 </body>
 
