@@ -1,0 +1,194 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    margin-left: 8em;
+    margin-right: 8em;
+    max-width: 1080px;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 5em;
+    width: 80%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    /* espacer les mots latéralement */
+    height: 5em;
+}
+
+a {
+    outline: none;
+    /* annule le formatage des liens */
+    text-decoration: none;
+}
+
+nav a {
+    color: #0065FC;
+    /* change la couleur des liens de Nav */
+    font-weight: 300;
+}
+
+.Hébergement,
+.Activités,
+.Inscription {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 5em;
+    width: 7em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.Inscription p,
+.btn,
+.inputCity {
+    font-family: 'Raleway';
+    font-weight: 700;
+    /* mise en gras du mot "S'inscrire" et des boutons filtres et recherche de ville */
+}
+
+.Hébergement:hover,
+.Activités:hover {
+    border-top: 1px solid #0065FC;
+    color: #DEEBFF;
+}
+
+.titre-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 4em;
+    padding-top: 2em;
+    line-height: 1px;
+    /*reduit l'épaisseur des lignes pour les rapprocher*/
+}
+
+h1 {
+    font-size: 12px;
+    /* annule le grossissement de la taille du H1 */
+}
+
+.city-selector {
+    display: flex;
+    align-content: flex-start;
+    margin-top: 1em;
+}
+
+.form {
+    display: flex;
+    /* aligner horizontalement icon, Input, button */
+}
+
+.city-selector i {
+    background-color: #F2F2F2;
+    border-radius: 12px 0 0 12px;
+    padding: 1em;
+    /*centrer l'icone sur le fond gris */
+    color: black;
+}
+
+.btnRechercher {
+    background-color: #0065FC;
+    border-radius: 0 12px 12px 0;
+    height: 3em;
+    font-family: 'Raleway';
+    color: white;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.inputCity {
+    border-top: 2px solid #F2F2F2;
+    border-bottom: 2px solid #F2F2F2;
+    border-left: none;
+    border-right: none;
+    padding-left: 1em;
+    padding-right: 2em;
+    font-family: 'Raleway';
+    color: black;
+}
+
+button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+    align-content: space-around;
+    justify-content: flex-start;
+    margin: auto;
+}
+
+.Filters {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin: 1.5em;
+}
+
+.Economique,
+.Familial,
+.Romantique,
+.Animaux {
+    display: flex;
+    border-right: 2px solid #F2F2F2;
+    border-top: 2px solid #F2F2F2;
+    border-bottom: 2px solid #F2F2F2;
+    border-radius: 30px;
+    margin-right: 1em;
+    padding-right: 1em;
+}
+
+.Economique:hover,
+.Familial:hover,
+.Romantique:hover,
+.Animaux:hover {
+    background-color: #F2F2F2;
+    color: #DEEBFF;
+    border-radius: 50px;
+}
+
+.information-header {
+    display: flex;
+    align-items: center;
+    align-content: space-around;
+    justify-content: flex-start;
+}
+
+.Filters i {
+    display: flex;
+    border-radius: 50%;
+    color: #0065FC;
+    background-color: #DEEBFF;
+    height: 1em;
+    width: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 1em;
+    padding-left: 0.95em;
+}
+
+.information-header i {
+    display: flex;
+    border-radius: 50%;
+    border: 1px solid #F2F2F2;
+    color: #0065FC;
+    height: 7px;
+    width: 7px;
+    padding: 5px;
+    padding-left: 8px;
+    padding-bottom: 7px;
+    margin-right: 0.5em;
+}

@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
     <!-- fonts Raleway from google fonts : regular, regular italic, bold, bold italic -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <meta name="Réservia" content="Draft for Reservia main page website" />
 
@@ -40,7 +41,7 @@
             <div class="logo">
                 <!-- must be link to réservia official website -->
                 <a href=#>
-                    <img src="images/logo/Reservia@3x.png" alt="Réservia">
+                    <img src="images/logo/Reservia.svg" alt="Réservia">
                 </a>
             </div>
             <nav>
@@ -56,7 +57,7 @@
                         <p>Activit&eacute;s</p>
                     </a>
                 </div>
-                <div class="S'inscrire">
+                <div class="Inscription">
                     <!-- must be a link to sign up form -->
                     <a href="#">
                         <p>S'inscrire</p>
@@ -65,30 +66,35 @@
             </nav>
         </section>
         <Aside class=Aside-header>
-            <div id="titre-header">
+            <div class="titre-header">
                 <h1>Trouvez votre h&eacute;bergement pour des vacances de r&ecirc;ves</h1>
-                </br>
                 <p>En plein centre ville ou en pleine nature</p>
-            </div class="city-selector">
-            <form class="cityselector" action="/action_page.php" style="margin:auto;max-width:200px">
-                <input type="text" placeholder="Marseille, France" name="search">
-                <i class="fas fa-map-marker-alt"></i><button name="Rechercher" type="submit" value="Rechercher">Rechercher</button>
-            </form>
-            <div id="filters">
-                <p>Filtres</p>
-                <!-- filters must be with javascript functions. Not available here -->
-                <i class="fas fa-money-bill-wave"></i><button class="btn" onclick="filterSelection('economique')">&Eacute;conomique</button>
-                <i class="fas fa-child"></i><button class="btn" onclick="filterSelection('familial')">Familial</button>
-                <i class="fas fa-heart"></i></i><button class="btn" onclick="filterSelection('romantique')">Romantique</button>
-                <i class="fas fa-dog"></i><button class="btn" onclick="filterSelection('animaux-autorises')">Animaux autoris&eacute;s</button>
             </div>
-            <div>
+            <div class="city-selector">
+                <form class="form" action="/action_page.php" style="max-width:300px">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input class="inputCity" type="text" placeholder="Marseille, France" name="search">
+                    <button class="btnRechercher" name="Rechercher" type="submit" value="Rechercher">Rechercher</button>
+                </form>
+            </div>
+            <div class="filters">
+                <p><strong>Filtres</strong></p>
+                <!-- filters must be with javascript functions. Not available here -->
+                <div class="Filters">
+                    <div class="Economique"><i class="fas fa-money-bill-wave"></i><button class="btn" onclick="filterSelection('economique')">&Eacute;conomique</button></div>
+                    <div class="Familial"><i class="fas fa-child"></i><button class="btn" onclick="filterSelection('familial')">Familial</button></div>
+                    <div class="Romantique"><i class="fas fa-heart"></i><button class="btn" onclick="filterSelection('romantique')">Romantique</button></div>
+                    <div class="Animaux"><i class="fas fa-dog"></i><button class="btn" onclick="filterSelection('animaux-autorises')">Animaux autoris&eacute;s</button></div>
+                </div>
+            </div>
+            <div class="information-header">
                 <i class="fas fa-info"></i>
                 <!--"plus de xxx logements disponibles = must be with javascript"-->
                 <p>Plus de 500 logements sont disponibles dans cette ville</p>
             </div>
         </Aside>
     </header>
+
     <section id="bloc-hébergements">
         <div class="bloc-herbergement">
             <!--"Marseille" must be with javascript function #cityselector.input-->
@@ -180,7 +186,7 @@
             <!-- button must be handle with javascript -->
             <button name="Afficher plus" type="submit" value="">Afficher plus</button>
         </div>
-        <aside class="bloc-hebergement">
+        <aside class="Aside-hebergement">
             <div class="hebergement-populaires-title">
                 <h1>Les plus populaires</h1>
                 <i class="fas fa-chart-line"></i>
