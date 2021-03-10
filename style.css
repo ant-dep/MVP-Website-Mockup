@@ -1,25 +1,42 @@
 body {
     font-family: 'Raleway', sans-serif;
     font-size: 12px;
-    margin-left: 8em;
-    margin-right: 8em;
+    font-weight: 200;
+    margin-left: 2em;
+    margin-right: 2em;
     max-width: 1080px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 16px;
+    font-weight: 500s;
+}
+
+h2 {
+    font-size: 12px;
+    font-weight: 700;
 }
 
 .top-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
     height: 5em;
-    width: 80%;
+}
+
+.logo {
+    padding-top: 2em;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    /* espacer les mots latéralement */
+    /* align elements at the bottom of nav block */
     height: 5em;
+    /* make space between elements on main axis */
+    padding-right: 1em;
+    padding-top: 1em;
 }
 
 a {
@@ -30,8 +47,9 @@ a {
 
 nav a {
     color: #0065FC;
-    /* change la couleur des liens de Nav */
+    /* change the color of links in Nav block */
     font-weight: 300;
+    font-size: 14px;
 }
 
 .Hébergement,
@@ -51,7 +69,7 @@ nav a {
 .inputCity {
     font-family: 'Raleway';
     font-weight: 700;
-    /* mise en gras du mot "S'inscrire" et des boutons filtres et recherche de ville */
+    /* make bold "S'inscrire" and buttons */
 }
 
 .Hébergement:hover,
@@ -66,14 +84,9 @@ nav a {
     justify-content: center;
     align-items: flex-start;
     height: 4em;
-    padding-top: 2em;
+    padding-top: 3em;
     line-height: 1px;
-    /*reduit l'épaisseur des lignes pour les rapprocher*/
-}
-
-h1 {
-    font-size: 12px;
-    /* annule le grossissement de la taille du H1 */
+    /* reduce height of lines to make them closer */
 }
 
 .city-selector {
@@ -84,20 +97,21 @@ h1 {
 
 .form {
     display: flex;
-    /* aligner horizontalement icon, Input, button */
+    /* algin on main axis icon, Input and button */
 }
 
 .city-selector i {
     background-color: #F2F2F2;
     border-radius: 12px 0 0 12px;
-    padding: 1em;
-    /*centrer l'icone sur le fond gris */
+    padding: 1.25em;
+    /* center the icon within its grey circle */
     color: black;
 }
 
 .btnRechercher {
     background-color: #0065FC;
     border-radius: 0 12px 12px 0;
+    /* make rounded shape on specific corners */
     height: 3em;
     font-family: 'Raleway';
     color: white;
@@ -119,6 +133,7 @@ h1 {
 button {
     background-color: transparent;
     outline: none;
+    /* unstylish button format */
     border: none;
     cursor: pointer;
 }
@@ -129,6 +144,12 @@ button {
     align-content: space-around;
     justify-content: flex-start;
     margin: auto;
+}
+
+.filters p {
+    font-weight: 400;
+    /* make it bolder */
+    font-size: 14px;
 }
 
 .Filters {
@@ -147,6 +168,7 @@ button {
     border-top: 2px solid #F2F2F2;
     border-bottom: 2px solid #F2F2F2;
     border-radius: 30px;
+    /* make rounded corner on rightside */
     margin-right: 1em;
     padding-right: 1em;
 }
@@ -158,6 +180,7 @@ button {
     background-color: #F2F2F2;
     color: #DEEBFF;
     border-radius: 50px;
+    /* make hover stay inside the rounded shape instead of regular square shape */
 }
 
 .information-header {
@@ -178,6 +201,7 @@ button {
     padding-bottom: 1em;
     padding-right: 1em;
     padding-left: 0.95em;
+    /* center icon on light blue background circle */
 }
 
 .information-header i {
@@ -191,4 +215,174 @@ button {
     padding-left: 8px;
     padding-bottom: 7px;
     margin-right: 0.5em;
+}
+
+.bloc-hébergements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 42em;
+    width: 100%;
+}
+
+.bloc-hebergement {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: #F2F2F2;
+    height: 95%;
+    width: 65%;
+    border-radius: 20px;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    /* flex direction changed so this moves items on cross axis instead of main */
+}
+
+.results-hebergements {
+    display: grid;
+    grid-template: 50% 50% / 33% 33% 33%;
+    column-gap: 0.8em;
+    row-gap: 1em;
+    width: 100%;
+    height: 30em;
+}
+
+.Auberge-la-cannebiere,
+.Hotel-du-port,
+.Hotel-Les-mouettes,
+.Hotel-de-la-mer,
+.Auberge-Le-Panier,
+.Hotel-chez-Amina,
+.Hotel-Le-Soleil-du-matin,
+.Au-coeur-de-l-eau-Chambres-d-hotes,
+.Hotel-Tout-bleu-et-Blanc {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid #F2F2F2;
+    border-radius: 20px;
+    height: 13em;
+    width: 85%;
+    contain: content;
+    padding: 6px;
+    margin: 0;
+}
+
+.results-hebergements figcaption {
+    height: 40%;
+    padding-left: 1em;
+    padding-bottom: 1em;
+    font-weight: 100;
+    font-size: 10px;
+    line-height: 10px;
+    color: black;
+}
+
+.Auberge-la-cannebiere {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.Hotel-du-port {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.Hotel-Les-mouettes {
+    grid-column: 3 / 4;
+    grid-row: 1/ 2;
+}
+
+.Hotel-de-la-mer {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.Auberge-Le-Panier {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.Hotel-chez-Amina {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+.results-hebergements img,
+.results-activites img {
+    min-width: 0;
+    min-height: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+}
+
+.btnAfficher-plus button {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.Aside-hebergement {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    width: 30%;
+    height: 42em;
+    margin-left: 2em;
+}
+
+.hebergement-populaires-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+}
+
+.results-populaires {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 32em;
+    margin-bottom: 2em;
+    padding-right: 1em;
+}
+
+.results-populaires figure {
+    display: flex;
+    flex-direction: row;
+    height: 8em;
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.results-populaires img {
+    min-width: 0;
+    min-height: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 12px 0 0 12px;
+}
+
+.results-populaires figcaption {
+    height: 100%;
+    width: 100%;
+    padding-left: 1em;
+    padding-right: 3em;
+    font-weight: 100;
+    font-size: 10px;
+    line-height: 15px;
+    color: black;
 }
