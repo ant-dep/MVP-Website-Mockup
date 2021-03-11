@@ -1,563 +1,636 @@
-    body {
-        font-family: 'Raleway', sans-serif;
-        font-size: 12px;
-        font-weight: 200;
-        width: 100%;
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+    width: 100%;
+}
+
+h1,
+h2 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+h3,
+h4 {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+header {
+    width: 90%;
+    padding-left: 3em;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    height: 5em;
+}
+
+.logo {
+    padding-top: 2em;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    /* align elements at the bottom of nav block */
+    height: 5em;
+    /* make space between elements on main axis */
+    padding-top: 1em;
+}
+
+a,
+ul,
+li {
+    outline: none;
+    /* annule le formatage des liens */
+    text-decoration: none;
+    list-style-type: none;
+}
+
+ul a {
+    color: black;
+    /* for footer li */
+}
+
+nav a {
+    color: #0065FC;
+    /* change the color of links in Nav block */
+    font-weight: 300;
+    font-size: 11px;
+}
+
+.Hébergement,
+.Activités,
+.Inscription {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 6.4em;
+    width: 7em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.Inscription p,
+.btn,
+.inputCity {
+    font-family: 'Raleway';
+    font-weight: 700;
+    /* make bold "S'inscrire" and buttons */
+}
+
+.Hébergement:hover,
+.Activités:hover {
+    border-top: 3px solid #0065FC;
+    color: #DEEBFF;
+}
+
+.titre-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 4em;
+    padding-top: 3em;
+    line-height: 1px;
+    /* reduce height of lines to make them closer */
+}
+
+.city-selector {
+    display: flex;
+    align-content: flex-start;
+    margin-top: 1em;
+}
+
+.form {
+    display: flex;
+    /* algin on main axis icon, Input and button */
+}
+
+.city-selector i {
+    background-color: #F2F2F2;
+    border-radius: 12px 0 0 12px;
+    padding: 1.25em;
+    /* center the icon within its grey circle */
+    color: black;
+}
+
+.btnRechercher {
+    background-color: #0065FC;
+    border-radius: 0 12px 12px 0;
+    /* make rounded shape on specific corners */
+    height: 3em;
+    font-family: 'Raleway';
+    color: white;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.inputCity {
+    border-top: 2px solid #F2F2F2;
+    border-bottom: 2px solid #F2F2F2;
+    border-left: none;
+    border-right: none;
+    padding-left: 1em;
+    padding-right: 2em;
+    font-family: 'Raleway';
+    color: black;
+}
+
+button {
+    background-color: transparent;
+    outline: none;
+    /* unstylish button format */
+    border: none;
+    cursor: pointer;
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+    align-content: space-around;
+    justify-content: flex-start;
+    margin: auto;
+}
+
+.filters p {
+    font-weight: 400;
+    /* make it bolder */
+    font-size: 14px;
+}
+
+.Filters {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin: 1.5em;
+}
+
+.Economique,
+.Familial,
+.Romantique,
+.Animaux {
+    display: flex;
+    border-right: 2px solid #F2F2F2;
+    border-top: 2px solid #F2F2F2;
+    border-bottom: 2px solid #F2F2F2;
+    border-radius: 30px;
+    /* make rounded corner on rightside */
+    margin-right: 1em;
+    padding-right: 1em;
+}
+
+.Economique:hover,
+.Familial:hover,
+.Romantique:hover,
+.Animaux:hover {
+    background-color: #F2F2F2;
+    color: #DEEBFF;
+    border-radius: 50px;
+    /* make hover stay inside the rounded shape instead of regular square shape */
+}
+
+.information-header {
+    display: flex;
+    align-items: center;
+    align-content: space-around;
+    justify-content: flex-start;
+}
+
+.Filters i {
+    display: flex;
+    border-radius: 50%;
+    color: #0065FC;
+    background-color: #DEEBFF;
+    height: 1em;
+    width: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 1em;
+    padding-left: 0.95em;
+    /* center icon on light blue background circle */
+}
+
+.information-header i {
+    display: flex;
+    border-radius: 50%;
+    border: 1px solid #F2F2F2;
+    color: #0065FC;
+    height: 7px;
+    width: 7px;
+    padding: 5px;
+    padding-left: 8px;
+    padding-bottom: 7px;
+    margin-right: 0.5em;
+}
+
+.bloc-hébergements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 42em;
+    padding-left: 3em;
+    width: 90%;
+}
+
+.bloc-hebergement {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: #F2F2F2;
+    height: 95%;
+    width: 70%;
+    border-radius: 20px;
+    padding-left: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.results-hebergements {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 33%);
+    grid-template-rows: 50% 50%;
+    column-gap: 0.1em;
+    row-gap: 1.5em;
+    margin-bottom: 2em;
+    width: 100%;
+    height: 30em;
+}
+
+.Auberge-la-cannebiere {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.Hotel-du-port {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.Hotel-Les-mouettes {
+    grid-column: 3 / 4;
+    grid-row: 1/ 2;
+}
+
+.Hotel-de-la-mer {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.Auberge-Le-Panier {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.Hotel-chez-Amina {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+.Auberge-la-cannebiere,
+.Hotel-du-port,
+.Hotel-Les-mouettes,
+.Hotel-de-la-mer,
+.Auberge-Le-Panier,
+.Hotel-chez-Amina,
+.Hotel-Le-Soleil-du-matin,
+.Au-coeur-de-l-eau-Chambres-d-hotes,
+.Hotel-Tout-bleu-et-Blanc {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid #F2F2F2;
+    border-radius: 20px;
+    height: 13em;
+    width: 85%;
+    contain: content;
+    padding: 6px;
+    margin: 0;
+}
+
+.results-hebergements figcaption {
+    height: 40%;
+    padding-left: 1em;
+    padding-bottom: 1em;
+    padding-top: 0.5em;
+    font-weight: 100;
+    font-size: 10px;
+    line-height: 5px;
+    color: black;
+}
+
+.results-hebergements img {
+    min-width: 0;
+    min-height: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    /* The image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit */
+    border-radius: 12px 12px 0 0;
+}
+
+.btnAfficher-plus button {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.Aside-hebergement {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    width: 30%;
+    height: 42em;
+    margin-left: 2em;
+}
+
+.hebergement-populaires-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+}
+
+.results-populaires {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 32em;
+    margin-bottom: 2em;
+    padding-right: 1em;
+}
+
+.results-populaires figure {
+    display: flex;
+    flex-direction: row;
+    height: 8em;
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+
+/* the next part is not useless: specific border-radius angle */
+
+.results-populaires img {
+    min-width: 0;
+    min-height: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 12px 0 0 12px;
+}
+
+.results-populaires figcaption {
+    height: 100%;
+    width: 100%;
+    padding-left: 1em;
+    padding-right: 3em;
+    font-weight: 100;
+    font-size: 10px;
+    line-height: 15px;
+    color: black;
+}
+
+.bloc-activités {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 3em;
+    width: 90%;
+    height: 35em;
+}
+
+.results-activites {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 3em;
+    row-gap: 2em;
+    width: 100%;
+    height: 25em;
+    padding-bottom: 1em;
+}
+
+.results-activites figcaption {
+    padding-left: 1.25em;
+    font-weight: 700;
+}
+
+.Vieux-port {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.Fort-de-Pomègues {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.Iles-du-Frioul {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+.Parc-National-des-Calanques {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+}
+
+.Notre-Dame-de-la-Garde {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+}
+
+.Parc-Longchamp {
+    grid-row: 2 / 3;
+    grid-column: 4 / 5;
+}
+
+.Notre-Dame-de-la-Garde figure,
+.Parc-Longchamp figure {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    color: black;
+    font-weight: 400;
+    height: 12em;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    box-shadow: 0 5px 2px #F2F2F2;
+}
+
+.Parc-Longchamp {
+    margin-top: 1em;
+}
+
+.Vieux-port figure,
+.Parc-National-des-Calanques figure {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    color: black;
+    font-weight: 400;
+    height: 28em;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    box-shadow: 2px 5px 5px #F2F2F2;
+}
+
+.Fort-de-Pomègues figure {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    color: black;
+    font-weight: 400;
+    height: 14em;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    box-shadow: 2px 5px 5px #F2F2F2;
+}
+
+.Iles-du-Frioul figure {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    color: black;
+    font-weight: 400;
+    height: 11em;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding-top: 2.1em;
+    box-shadow: 2px 5px 5px #F2F2F2;
+}
+
+.results-activites img {
+    min-width: 0;
+    min-height: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.Notre-Dame-de-la-Garde img {
+    object-position: 0 3px;
+    /* move down a bit the image in its box */
+}
+
+.Iles-du-Frioul img {
+    object-position: 0 -10px;
+}
+
+.Parc-National-des-Calanques img {
+    filter: brightness(130%);
+}
+
+footer {
+    display: flex;
+    justify-content: flex-start;
+    align-content: space-around;
+    background-color: #F2F2F2;
+    background-size: cover;
+    margin-top: 3em;
+    padding-top: 3em;
+    line-height: 2em;
+    height: 12em;
+    width: 100%;
+}
+
+footer div {
+    margin-right: 10em;
+    color: black;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body,
+    header,
+    .bloc-hébergements,
+    .bloc-hebergement,
+    .Aside-hebergement,
+    .bloc-activités {
+        width: 99%;
+        /* don't know why but doesnn't fit the screen at 100% */
+        height: auto;
+        margin: 0.5em;
+        padding: 0;
     }
-    
-    h1,
-    h2 {
-        font-size: 16px;
-        font-weight: 700;
-    }
-    
-    h3,
-    h4 {
-        font-size: 12px;
-        font-weight: 600;
-    }
-    
-    header {
-        width: 90%;
-        padding-left: 5em;
-    }
-    
-    .top-header {
-        display: flex;
-        justify-content: space-between;
-        height: 5em;
-    }
-    
-    .logo {
-        padding-top: 2em;
-    }
-    
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        /* align elements at the bottom of nav block */
-        height: 5em;
-        /* make space between elements on main axis */
-        padding-top: 1em;
-    }
-    
-    a,
-    ul,
-    li {
-        outline: none;
-        /* annule le formatage des liens */
-        text-decoration: none;
-        list-style-type: none;
-    }
-    
-    ul a {
-        color: black;
-        /* for footer li */
-    }
-    
-    nav a {
-        color: #0065FC;
-        /* change the color of links in Nav block */
-        font-weight: 300;
-        font-size: 11px;
-    }
-    
     .Hébergement,
     .Activités,
     .Inscription {
         display: flex;
         align-items: flex-end;
         justify-content: center;
-        height: 6.4em;
+        height: 5.9em;
         width: 7em;
         padding-left: 1em;
         padding-right: 1em;
     }
-    
-    .Inscription p,
-    .btn,
-    .inputCity {
-        font-family: 'Raleway';
-        font-weight: 700;
-        /* make bold "S'inscrire" and buttons */
-    }
-    
-    .Hébergement:hover,
-    .Activités:hover {
-        border-top: 3px solid #0065FC;
-        color: #DEEBFF;
-    }
-    
-    .titre-header {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        height: 4em;
-        padding-top: 3em;
-        line-height: 1px;
-        /* reduce height of lines to make them closer */
-    }
-    
-    .city-selector {
-        display: flex;
-        align-content: flex-start;
-        margin-top: 1em;
-    }
-    
-    .form {
-        display: flex;
-        /* algin on main axis icon, Input and button */
-    }
-    
-    .city-selector i {
-        background-color: #F2F2F2;
-        border-radius: 12px 0 0 12px;
-        padding: 1.25em;
-        /* center the icon within its grey circle */
-        color: black;
-    }
-    
-    .btnRechercher {
-        background-color: #0065FC;
-        border-radius: 0 12px 12px 0;
-        /* make rounded shape on specific corners */
-        height: 3em;
-        font-family: 'Raleway';
-        color: white;
-        padding-left: 1em;
-        padding-right: 1em;
-    }
-    
-    .inputCity {
-        border-top: 2px solid #F2F2F2;
-        border-bottom: 2px solid #F2F2F2;
-        border-left: none;
-        border-right: none;
-        padding-left: 1em;
-        padding-right: 2em;
-        font-family: 'Raleway';
-        color: black;
-    }
-    
-    button {
-        background-color: transparent;
-        outline: none;
-        /* unstylish button format */
-        border: none;
-        cursor: pointer;
-    }
-    
-    .filters {
-        display: flex;
-        align-items: center;
-        align-content: space-around;
-        justify-content: flex-start;
-        margin: auto;
-    }
-    
-    .filters p {
-        font-weight: 400;
-        /* make it bolder */
-        font-size: 14px;
-    }
-    
-    .Filters {
-        display: flex;
-        justify-content: center;
-        align-items: baseline;
-        flex-wrap: wrap;
-        margin: 1.5em;
-    }
-    
-    .Economique,
-    .Familial,
-    .Romantique,
-    .Animaux {
-        display: flex;
-        border-right: 2px solid #F2F2F2;
-        border-top: 2px solid #F2F2F2;
-        border-bottom: 2px solid #F2F2F2;
-        border-radius: 30px;
-        /* make rounded corner on rightside */
-        margin-right: 1em;
-        padding-right: 1em;
-    }
-    
-    .Economique:hover,
-    .Familial:hover,
-    .Romantique:hover,
-    .Animaux:hover {
-        background-color: #F2F2F2;
-        color: #DEEBFF;
-        border-radius: 50px;
-        /* make hover stay inside the rounded shape instead of regular square shape */
-    }
-    
-    .information-header {
-        display: flex;
-        align-items: center;
-        align-content: space-around;
-        justify-content: flex-start;
-    }
-    
-    .Filters i {
-        display: flex;
-        border-radius: 50%;
-        color: #0065FC;
-        background-color: #DEEBFF;
-        height: 1em;
-        width: 1em;
-        padding-top: 1em;
-        padding-bottom: 1em;
-        padding-right: 1em;
-        padding-left: 0.95em;
-        /* center icon on light blue background circle */
-    }
-    
-    .information-header i {
-        display: flex;
-        border-radius: 50%;
-        border: 1px solid #F2F2F2;
-        color: #0065FC;
-        height: 7px;
-        width: 7px;
-        padding: 5px;
-        padding-left: 8px;
-        padding-bottom: 7px;
-        margin-right: 0.5em;
-    }
-    
-    .bloc-hébergements {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 42em;
-        padding-left: 5em;
-        width: 90%;
-    }
-    
     .bloc-hebergement {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: flex-start;
-        background-color: #F2F2F2;
-        height: 95%;
-        width: 65%;
-        border-radius: 20px;
-        padding-left: 4em;
-        padding-right: 2em;
-        padding-top: 1em;
-        padding-bottom: 1em;
+        padding: 1em;
+        padding-left: 2em;
+        width: 50%;
     }
-    
     .results-hebergements {
         display: grid;
-        grid-template-columns: repeat(auto-fill, 32%);
-        grid-template-rows: 50% 50%;
+        grid-template-columns: repeat(auto-fit, 47%);
+        grid-template-rows: repeat(auto-fit, 13em);
         column-gap: 0.8em;
         row-gap: 1.5em;
-        margin-bottom: 2em;
-        width: 100%;
-        height: 30em;
-    }
-    
-    .Auberge-la-cannebiere {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-    }
-    
-    .Hotel-du-port {
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
-    }
-    
-    .Hotel-Les-mouettes {
-        grid-column: 3 / 4;
-        grid-row: 1/ 2;
-    }
-    
-    .Hotel-de-la-mer {
-        grid-column: 1 / 2;
-        grid-row: 2 / 3;
-    }
-    
-    .Auberge-Le-Panier {
-        grid-column: 2 / 3;
-        grid-row: 2 / 3;
-    }
-    
-    .Hotel-chez-Amina {
-        grid-column: 3 / 4;
-        grid-row: 2 / 3;
-    }
-    
-    .Auberge-la-cannebiere,
-    .Hotel-du-port,
-    .Hotel-Les-mouettes,
-    .Hotel-de-la-mer,
-    .Auberge-Le-Panier,
-    .Hotel-chez-Amina,
-    .Hotel-Le-Soleil-du-matin,
-    .Au-coeur-de-l-eau-Chambres-d-hotes,
-    .Hotel-Tout-bleu-et-Blanc {
-        display: flex;
-        flex-direction: column;
-        background-color: white;
-        border: 1px solid #F2F2F2;
-        border-radius: 20px;
-        height: 13em;
-        width: 85%;
-        contain: content;
-        padding: 6px;
-        margin: 0;
-    }
-    
-    .results-hebergements figcaption {
-        height: 40%;
-        padding-left: 1em;
-        padding-bottom: 1em;
-        padding-top: 0.5em;
-        font-weight: 100;
-        font-size: 10px;
-        line-height: 5px;
-        color: black;
-    }
-    
-    .results-hebergements img {
-        min-width: 0;
-        min-height: 0;
         width: 100%;
         height: 100%;
-        overflow: hidden;
-        object-fit: cover;
-        /* The image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit */
-        border-radius: 12px 12px 0 0;
     }
-    
-    .btnAfficher-plus button {
-        font-size: 13px;
-        font-weight: 700;
-    }
-    
     .Aside-hebergement {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        background-color: #F2F2F2;
-        border-radius: 20px;
-        width: 30%;
-        height: 42em;
-        margin-left: 2em;
+        justify-content: flex-start;
+        margin-left: 1em;
+        width: 40%;
+        height: 53.5em;
     }
-    
-    .hebergement-populaires-title {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 80%;
-        padding-left: 1em;
-        padding-right: 1em;
+    .results-populaires,
+    .results-activites {
+        column-gap: 1em;
+        row-gap: 2.5em;
         padding-top: 1em;
     }
-    
-    .results-populaires {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        width: 80%;
-        height: 32em;
-        margin-bottom: 2em;
-        padding-right: 1em;
-    }
-    
-    .results-populaires figure {
-        display: flex;
-        flex-direction: row;
-        height: 8em;
-        width: 100%;
-        margin-bottom: 2em;
-    }
-    /* the next part is not useless: specific border-radius angle */
-    
-    .results-populaires img {
-        min-width: 0;
-        min-height: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        object-fit: cover;
-        border-radius: 12px 0 0 12px;
-    }
-    
-    .results-populaires figcaption {
-        height: 100%;
-        width: 100%;
-        padding-left: 1em;
-        padding-right: 3em;
-        font-weight: 100;
-        font-size: 10px;
-        line-height: 15px;
-        color: black;
-    }
-    
     .bloc-activités {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        padding-left: 5em;
-        width: 90%;
-        height: 35em;
+        margin-top: 4em;
     }
-    
-    .results-activites {
-        display: grid;
-        grid-template-rows: 50% 50%;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        column-gap: 3em;
-        row-gap: 2em;
-        width: 100%;
-        height: 25em;
-        padding-bottom: 1em;
-    }
-    
-    .results-activites figcaption {
-        padding-left: 1.25em;
-        font-weight: 700;
-    }
-    
-    .Vieux-port {
-        grid-column: 1 / 2;
-        grid-row: 1 / 3;
-    }
-    
-    .Fort-de-Pomègues {
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
-    }
-    
-    .Iles-du-Frioul {
-        grid-row: 2 / 3;
-        grid-column: 2 / 3;
-    }
-    
-    .Parc-National-des-Calanques {
-        grid-column: 3 / 4;
-        grid-row: 1 / 3;
-    }
-    
-    .Notre-Dame-de-la-Garde {
-        grid-column: 4 / 5;
-        grid-row: 1 / 2;
-    }
-    
-    .Parc-Longchamp {
-        grid-row: 2 / 3;
-        grid-column: 4 / 5;
-    }
-    
-    .Notre-Dame-de-la-Garde figure,
-    .Parc-Longchamp figure {
-        display: flex;
-        flex-direction: column;
-        border-radius: 20px;
-        color: black;
-        font-weight: 400;
-        height: 12em;
-        width: 100%;
-        overflow: hidden;
-        margin: 0;
-        box-shadow: 0 5px 2px #F2F2F2;
-    }
-    
-    .Parc-Longchamp {
-        margin-top: 1em;
-    }
-    
-    .Vieux-port figure,
-    .Parc-National-des-Calanques figure {
-        display: flex;
-        flex-direction: column;
-        border-radius: 15px;
-        color: black;
-        font-weight: 400;
-        height: 28em;
-        width: 100%;
-        overflow: hidden;
-        margin: 0;
-        box-shadow: 2px 5px 5px #F2F2F2;
-    }
-    
-    .Fort-de-Pomègues figure {
-        display: flex;
-        flex-direction: column;
-        border-radius: 15px;
-        color: black;
-        font-weight: 400;
-        height: 14em;
-        width: 100%;
-        overflow: hidden;
-        margin: 0;
-        box-shadow: 2px 5px 5px #F2F2F2;
-    }
-    
-    .Iles-du-Frioul figure {
-        display: flex;
-        flex-direction: column;
-        border-radius: 15px;
-        color: black;
-        font-weight: 400;
-        height: 11em;
-        width: 100%;
-        overflow: hidden;
-        margin: 0;
-        padding-top: 2.1em;
-        box-shadow: 2px 5px 5px #F2F2F2;
-    }
-    
-    .results-activites img {
-        min-width: 0;
-        min-height: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        object-fit: cover;
-        border-radius: 12px 12px 0 0;
-    }
-    
-    .Notre-Dame-de-la-Garde img {
-        object-position: 0 3px;
-        /* move down a bit the image in its box */
-    }
-    
-    .Iles-du-Frioul img {
-        object-position: 0 -10px;
-    }
-    
-    .Parc-National-des-Calanques img {
-        filter: brightness(130%);
-    }
-    
     footer {
-        display: flex;
-        justify-content: flex-start;
-        align-content: space-around;
-        background-color: #F2F2F2;
-        background-size: cover;
-        margin-top: 3em;
-        padding-top: 3em;
-        padding-left: 2em;
-        line-height: 2em;
-        height: 12em;
+        margin: 0;
+        margin-top: 8em;
+        padding-bottom: 1em;
+        padding-top: 1em;
+        line-height: 20px;
         width: 100%;
     }
-    
     footer div {
-        margin-right: 12em;
-        color: black;
+        margin-right: 6em;
     }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (max-width: 768px) {
+    todo
+}
