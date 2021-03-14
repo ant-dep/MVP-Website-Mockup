@@ -36,34 +36,32 @@
 
 <body>
     <header>
-        <div class="top-header">
+        <nav>
             <div class="logo">
                 <!-- must be link to réservia official website -->
                 <a href=#>
                     <img src="images/logo/Reservia.svg" alt="Réservia">
                 </a>
             </div>
-            <nav>
-                <div class="Hébergement">
-                    <!-- Anchor to Hébergements -->
-                    <a href="#bloc-hébergements">
-                        <p>H&eacute;bergements</p>
-                    </a>
-                </div>
-                <div class="Activités">
-                    <!-- Anchor to Activités -->
-                    <a href="#bloc-activités">
-                        <p>Activit&eacute;s</p>
-                    </a>
-                </div>
-                <div class="Inscription">
-                    <!-- must be a link to sign up form -->
-                    <a href="#">
-                        <p>S'inscrire</p>
-                    </a>
-                </div>
-            </nav>
-        </div>
+            <div class="Hébergements">
+                <!-- Anchor to Hébergements -->
+                <a href="#bloc-hébergements">
+                    <p>H&eacute;bergements</p>
+                </a>
+            </div>
+            <div class="Activités">
+                <!-- Anchor to Activités -->
+                <a href="#bloc-activités">
+                    <p>Activit&eacute;s</p>
+                </a>
+            </div>
+            <div class="Inscription">
+                <!-- must be a link to sign up form -->
+                <a href="#">
+                    <p>S'inscrire</p>
+                </a>
+            </div>
+        </nav>
         <Aside class=Aside-header>
             <div class="titre-header">
                 <h1>Trouvez votre h&eacute;bergement pour des vacances de r&ecirc;ve</h1>
@@ -71,9 +69,10 @@
             </div>
             <div class="city-selector">
                 <form class="form" action="/action_page.php" style="max-width:300px">
-                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="mapIcon"><i class="fas fa-map-marker-alt"></i></div>
                     <input class="inputCity" type="text" placeholder="Marseille, France" name="search">
                     <button class="btnRechercher" name="Rechercher" type="submit" value="Rechercher">Rechercher</button>
+                    <button class="btnIcon"><i class="fas fa-search" style="font-size: 18px;"></i></button>
                 </form>
             </div>
             <div class="filters">
@@ -94,7 +93,7 @@
         </Aside>
     </header>
 
-    <section class="bloc-hébergements">
+    <section id="bloc-hébergements">
         <div class="bloc-hebergement">
             <!--"Marseille" must be with javascript function #cityselector.input-->
             <h2>H&eacute;bergements &agrave; Marseille</h2>
@@ -218,12 +217,15 @@
         </aside>
     </section>
 
-    <section class="bloc-activités">
+    <section id="bloc-activités">
         <h2>Activit&eacute;s &agrave; Marseille</h2>
         <aside class="results-activites">
             <div class="Vieux-port">
                 <a href="#">
                     <figure>
+                        <!--medium size pic on desktop with 4 columns layout and large size pic on tablet and mobile with 1 or 2 columns layout-->
+                        <source media="(min-width: 768px)" srcset="images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg">
+                        <source media="(max-width: 769px)" srcset="images/activites/2_large/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg">
                         <img src="images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port">
                         <figcaption>
                             <p>Vieux Port</p>
@@ -234,7 +236,9 @@
             <div class="Fort-de-Pomègues">
                 <a href="#">
                     <figure>
-                        <img src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de Pom&egravegues">
+                        <source media="(min-width: 768px)" srcset="images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg">
+                        <source media="(max-width: 769px)" srcset="images/activites/2_large/paul-hermann-QFTrLdQIRhI-unsplash.jpg">
+                        <img src="images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de Pom&egravegues">
                         <figcaption>
                             <p>Fort de Pom&egrave;gues</p>
                         </figcaption>
@@ -244,6 +248,8 @@
             <div class="Iles-du-Frioul">
                 <a href="#">
                     <figure>
+                        <source media="(min-width: 768px)" srcset="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg">
+                        <source media="(max-width: 769px)" srcset="images/activites/2_large/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg">
                         <img src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="&Icirc;les du Frioul">
                         <figcaption>
                             <p>&Icirc;les du Frioul</p>
@@ -254,7 +260,9 @@
             <div class="Parc-National-des-Calanques">
                 <a href="#">
                     <figure>
-                        <img src="images/activites/2_large/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg">
+                        <source media="(min-width: 768px)" srcset="images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg">
+                        <source media="(max-width: 769px)" srcset="images/activites/2_large/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg">
+                        <img src="images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg">
                         <figcaption>
                             <p>Parc National des Calanques</p>
                         </figcaption>
@@ -264,6 +272,8 @@
             <div class="Notre-Dame-de-la-Garde">
                 <a href="#">
                     <figure>
+                        <source media="(min-width: 768px)" srcset="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg">
+                        <source media="(max-width: 769px)" srcset="images/activites/2_large/florian-wehde-xW9e8gdotxI-unsplash.jpg">
                         <img src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Notre-Dame-de-la-Garde">
                         <figcaption>
                             <p>Notre-Dame-de-la-Garde</p>
@@ -274,6 +284,8 @@
             <div class="Parc-Longchamp">
                 <a href="#">
                     <figure>
+                        <source media="(min-width: 768px)" srcset="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg">
+                        <source media="(max-width: 769px)" srcset="images/activites/2_large/lena-paulin-wH2-EJoDcV0-unsplash.jpg">
                         <img src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Parc Longchamp">
                         <figcaption>
                             <p>Parc Longchamp</p>
