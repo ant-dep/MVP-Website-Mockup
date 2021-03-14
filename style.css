@@ -1,4 +1,4 @@
-    body {
+body {
     font-family: 'Raleway', sans-serif;
     font-size: 12px;
     font-weight: 200;
@@ -443,7 +443,7 @@ button {
 
 .results-activites {
     display: grid;
-    grid-template-columns: repeat(autofill, minmax(10em, 20em));
+    grid-template-columns: repeat( auto-fill, minmax(10em, 20em));
     column-gap: 3em;
     row-gap: 2em;
     width: 100%;
@@ -583,20 +583,28 @@ footer div {
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
+    body,
     header,
     #bloc-hébergements,
     .Aside-hebergement,
     #bloc-activités {
-        width: 99%;
-        /* don't know why but doesn't fit the screen at 100% */
+        width: 100%;
+        margin: 0;
         height: auto;
-        margin: 0 0.5em;
         /* thin free space aroung main elements */
         padding: 0;
     }
+    header {
+        width: 95%;
+        padding-left: 1em;
+    }
     .bloc-hebergement {
-        padding: 1em 2em;
+        padding: 1em 0 1em 1em;
         width: 55%;
+    }
+    .results-hebergements {
+        display: grid;
+        grid-template-columns: repeat( auto-fill, minmax(5em, 15em));
     }
     .Aside-hebergement {
         justify-content: flex-start;
@@ -609,8 +617,9 @@ footer div {
     }
     #bloc-activités {
         margin-top: 4em;
-        padding: 0 2em;
         height: auto;
+        padding-left: 1em;
+        width: 95%;
     }
     .results-activites {
         grid-template-columns: 40% 60%;
@@ -638,8 +647,6 @@ footer div {
     }
     footer {
         margin: 0;
-        margin-top: 4em;
-        padding: 0 1em;
         line-height: 20px;
         width: 100%;
     }
@@ -649,9 +656,9 @@ footer div {
 }
 
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Small devices (portrait tablets and large phones, less than 600px) */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     body,
     header,
     #bloc-hébergements,
@@ -684,7 +691,7 @@ footer div {
         grid-template-rows: 70% 30%;
         align-items: center;
         height: 9em;
-        margin-top: 0;
+        margin: 0;
         padding-top: 0;
         width: 100%;
     }
@@ -719,9 +726,9 @@ footer div {
     .Inscription {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
+        justify-self: center;
         padding-left: 2em;
         height: auto;
-        width: 100%;
     }
     .titre-header {
         display: flex;
@@ -741,11 +748,11 @@ footer div {
         margin: 0;
     }
     .city-selector {
-        width: 100%;
+        width: 80%;
         height: 3.6em;
-        margin: 0 0 0 1em;
+        margin: 0 0 0 2em;
         /* center the form */
-        padding: 2em 1em;
+        padding: 2em 0;
     }
     .mapIcon {
         padding: 1em;
@@ -754,6 +761,7 @@ footer div {
     }
     .inputCity {
         font-size: 16px;
+        width: 100%;
     }
     .btnRechercher {
         display: none;
@@ -789,8 +797,7 @@ footer div {
         border-top: 2px solid lightgrey;
         border-bottom: 2px solid lightgrey;
         margin-bottom: 0.75em;
-        padding-top: ;
-        font-size: 15px;
+        font-size: 14px;
     }
     .filters i {
         font-size: 18px;
@@ -812,6 +819,8 @@ footer div {
     #bloc-hébergements {
         display: flex;
         flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
         width: 100%;
     }
     .bloc-hebergement,
@@ -822,7 +831,7 @@ footer div {
         justify-content: center;
         align-items: flex-start;
         width: 100%;
-        margin: 1em 0;
+        margin: 0;
     }
     .Aside-hebergement {
         border-radius: 0;
@@ -833,13 +842,13 @@ footer div {
         align-items: center;
         width: 90%;
     }
-    .results-populaires a {
+    .results-populaires a,
+    .results-activites a {
         width: 90%;
         margin-left: 1em;
     }
     .results-populaires figure {
         height: 10em;
-        margin: 0.35em 0;
     }
     .results-populaires img {
         width: 80%;
@@ -850,7 +859,9 @@ footer div {
         padding-right: 2em;
     }
     .bloc-hebergement {
-        padding: 1em;
+        padding: 0;
+        width: 90%;
+        margin-left: 1.25em;
         background-color: white;
     }
     .results-hebergements {
@@ -858,8 +869,11 @@ footer div {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-right: 2em;
+        margin-bottom: 1em;
         width: 100%;
+    }
+    .results-hebergements figure {
+        width: 90%;
     }
     .results-hebergements p {
         font-size: 14px;
@@ -867,18 +881,23 @@ footer div {
     #bloc-activités {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 100%;
-        margin: 0 1em;
+        margin: 2em 0 0 0;
+    }
+    #bloc-activités h2 {
+        align-self: flex-start;
+        padding-left: 1em;
     }
     .results-activites {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        width: 90%;
     }
     .results-activites figure {
         height: 12em;
-        width: 90%;
+        width: 100%;
         margin: 0;
         padding: 0;
         box-shadow: 0 5px 5px lightgrey;
@@ -888,9 +907,10 @@ footer div {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        margin: 2em 0 0em 0;
+        margin: 2em 0 0 0;
         padding: 2em 0 0 0;
         height: 35em;
+        width: 100%;
     }
     footer div {
         margin: 0;
@@ -899,3 +919,4 @@ footer div {
         padding: 0 2em;
         font-size: 14px;
     }
+}
