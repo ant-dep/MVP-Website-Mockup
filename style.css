@@ -1,894 +1,901 @@
-                                                                body {
-                                                                font-family: 'Raleway', sans-serif;
-                                                                font-size: 12px;
-                                                                font-weight: 200;
-                                                                width: 100%;
-                                                            }
-                                                            
-                                                            h1,
-                                                            h2 {
-                                                                font-size: 16px;
-                                                                font-weight: 700;
-                                                            }
-                                                            
-                                                            h3,
-                                                            h4 {
-                                                                font-size: 12px;
-                                                                font-weight: 600;
-                                                            }
-                                                            
-                                                            header {
-                                                                width: 90%;
-                                                                padding-left: 3em;
-                                                            }
-                                                            
-                                                            a,
-                                                            ul,
-                                                            li {
-                                                                outline: none;
-                                                                /* annule le formatage des liens */
-                                                                text-decoration: none;
-                                                                list-style-type: none;
-                                                            }
-                                                            
-                                                            ul a {
-                                                                color: black;
-                                                                /* for footer li */
-                                                            }
-                                                            
-                                                            nav a {
-                                                                color: #0065FC;
-                                                                /* change the color of links in Nav block */
-                                                                font-weight: 300;
-                                                                font-size: 11px;
-                                                                display: flex;
-                                                                justify-content: center;
-                                                                align-items: flex-end;
-                                                                /* move them to the bottom */
-                                                                height: 6em;
-                                                                /* make bigger box around the elements for hoover effect */
-                                                            }
-                                                            
-                                                            nav {
-                                                                display: grid;
-                                                                grid-template-columns: 60% 1fr 1fr 1fr;
-                                                                width: 100%;
-                                                                height: 6em;
-                                                                /* to have space for the line when hoover */
-                                                            }
-                                                            
-                                                            .logo {
-                                                                grid-column: 1 / 2;
-                                                                grid-row: 1 / 2;
-                                                                justify-self: flex-start;
-                                                                /* make it stay on the left */
-                                                            }
-                                                            
-                                                            .Hébergements {
-                                                                grid-column: 2 / 3;
-                                                                grid-row: 1 / 2;
-                                                            }
-                                                            
-                                                            .Activités {
-                                                                grid-column: 3 / 4;
-                                                                grid-row: 1 / 2;
-                                                                color: black;
-                                                            }
-                                                            
-                                                            .Inscription {
-                                                                grid-column: 4 / 5;
-                                                                grid-row: 1 / 2;
-                                                            }
-                                                            
-                                                            .Inscription p,
-                                                            .btn,
-                                                            .inputCity {
-                                                                font-family: 'Raleway';
-                                                                font-weight: 700;
-                                                                /* make bold "S'inscrire" and buttons */
-                                                            }
-                                                            
-                                                            .Hébergements:hover,
-                                                            .Activités:hover {
-                                                                border-top: 2px solid #0065FC;
-                                                            }
-                                                            
-                                                            .Activités p:hover {
-                                                                color: #0065FC;
-                                                            }
-                                                            
-                                                            .Activités p {
-                                                                color: black;
-                                                            }
-                                                            
-                                                            .titre-header {
-                                                                display: flex;
-                                                                flex-direction: column;
-                                                                justify-content: center;
-                                                                align-items: flex-start;
-                                                                flex-wrap: wrap;
-                                                                height: auto;
-                                                                padding-top: 3em;
-                                                                line-height: 1px;
-                                                                /* reduce height of lines to make them closer */
-                                                            }
-                                                            
-                                                            .city-selector {
-                                                                display: flex;
-                                                                align-content: flex-start;
-                                                                margin-top: 1em;
-                                                            }
-                                                            
-                                                            .form {
-                                                                display: flex;
-                                                                /* algin on main axis icon, Input and button */
-                                                            }
-                                                            
-                                                            .mapIcon {
-                                                                background-color: #F2F2F2;
-                                                                border-radius: 12px 0 0 12px;
-                                                                padding: 1.25em;
-                                                                /* center the icon within its grey circle */
-                                                                color: black;
-                                                            }
-                                                            
-                                                            .btnRechercher {
-                                                                background-color: #0065FC;
-                                                                border-radius: 0 12px 12px 0;
-                                                                /* make rounded shape on specific corners */
-                                                                height: 3em;
-                                                                font-family: 'Raleway';
-                                                                color: white;
-                                                                padding-left: 1em;
-                                                                padding-right: 1em;
-                                                            }
-                                                            
-                                                            .btnIcon {
-                                                                display: none;
-                                                            }
-                                                            
-                                                            .inputCity {
-                                                                border-top: 2px solid #F2F2F2;
-                                                                border-bottom: 2px solid #F2F2F2;
-                                                                border-left: none;
-                                                                border-right: none;
-                                                                padding-left: 1em;
-                                                                padding-right: 2em;
-                                                                font-family: 'Raleway';
-                                                            }
-                                                            
-                                                             ::placeholder {
-                                                                color: black;
-                                                                font-weight: 600;
-                                                                opacity: 1;
-                                                                /* Firefox */
-                                                            }
-                                                            
-                                                            button {
-                                                                background-color: transparent;
-                                                                outline: none;
-                                                                /* unstylish button format */
-                                                                border: none;
-                                                                cursor: pointer;
-                                                            }
-                                                            
-                                                            .filters {
-                                                                display: flex;
-                                                                align-items: center;
-                                                                align-content: space-around;
-                                                                justify-content: flex-start;
-                                                                margin: auto;
-                                                            }
-                                                            
-                                                            .filters p {
-                                                                font-weight: 400;
-                                                                /* make it bolder */
-                                                                font-size: 14px;
-                                                            }
-                                                            
-                                                            .Filters {
-                                                                display: flex;
-                                                                justify-content: center;
-                                                                align-items: baseline;
-                                                                flex-wrap: wrap;
-                                                                margin: 1.5em;
-                                                            }
-                                                            
-                                                            .Filters div {
-                                                                display: flex;
-                                                                align-items: center;
-                                                                border-right: 2px solid #F2F2F2;
-                                                                border-top: 2px solid #F2F2F2;
-                                                                border-bottom: 2px solid #F2F2F2;
-                                                                border-radius: 30px;
-                                                                /* make rounded corner on rightside */
-                                                                margin-right: 1em;
-                                                                padding-right: 1em;
-                                                                height: 3em;
-                                                            }
-                                                            
-                                                            .Filters div:hover {
-                                                                background-color: #F2F2F2;
-                                                                color: #DEEBFF;
-                                                                border-radius: 50px;
-                                                                /* make hover stay inside the rounded shape instead of regular square shape */
-                                                            }
-                                                            
-                                                            .information-header {
-                                                                display: flex;
-                                                                align-items: center;
-                                                                align-content: space-around;
-                                                                justify-content: flex-start;
-                                                            }
-                                                            
-                                                            .Filters i {
-                                                                display: flex;
-                                                                justify-content: center;
-                                                                align-items: center;
-                                                                border-radius: 50%;
-                                                                font-size: 14px;
-                                                                color: #0065FC;
-                                                                background-color: #DEEBFF;
-                                                                height: 0.7em;
-                                                                width: 0.7em;
-                                                                padding: 1em;
-                                                                /* center icon on light blue background circle */
-                                                            }
-                                                            
-                                                            .information-header i {
-                                                                display: flex;
-                                                                justify-content: center;
-                                                                align-items: center;
-                                                                border-radius: 50%;
-                                                                font-size: 10px;
-                                                                /* make i icon smaller */
-                                                                border: 1px solid lightgrey;
-                                                                color: #0065FC;
-                                                                height: 7px;
-                                                                width: 7px;
-                                                                padding: 8px;
-                                                                /* center the i icon */
-                                                                margin-right: 0.5em;
-                                                                /* make space between icon and text */
-                                                            }
-                                                            
-                                                            #bloc-hébergements {
-                                                                display: flex;
-                                                                justify-content: space-between;
-                                                                height: 100%;
-                                                                padding-left: 3em;
-                                                                /* free space on left side */
-                                                                width: 90%;
-                                                            }
-                                                            
-                                                            .bloc-hebergement {
-                                                                display: flex;
-                                                                flex-direction: column;
-                                                                justify-content: space-around;
-                                                                align-items: flex-start;
-                                                                background-color: #F2F2F2;
-                                                                height: auto;
-                                                                width: 70%;
-                                                                border-radius: 20px;
-                                                                padding-left: 2em;
-                                                            }
-                                                            
-                                                            .results-hebergements {
-                                                                display: grid;
-                                                                grid-template-columns: repeat( auto-fill, minmax(5em, 18em));
-                                                                column-gap: 1em;
-                                                                row-gap: 1.5em;
-                                                                margin-bottom: 2em;
-                                                                width: 100%;
-                                                                height: auto;
-                                                            }
-                                                            
-                                                            .Auberge-la-cannebiere {
-                                                                grid-column: 1 / 2;
-                                                                grid-row: 1 / 2;
-                                                            }
-                                                            
-                                                            .Hotel-du-port {
-                                                                grid-column: 2 / 3;
-                                                                grid-row: 1 / 2;
-                                                            }
-                                                            
-                                                            .Hotel-Les-mouettes {
-                                                                grid-column: 3 / 4;
-                                                                grid-row: 1/ 2;
-                                                            }
-                                                            
-                                                            .Hotel-de-la-mer {
-                                                                grid-column: 1 / 2;
-                                                                grid-row: 2 / 3;
-                                                            }
-                                                            
-                                                            .Auberge-Le-Panier {
-                                                                grid-column: 2 / 3;
-                                                                grid-row: 2 / 3;
-                                                            }
-                                                            
-                                                            .Hotel-chez-Amina {
-                                                                grid-column: 3 / 4;
-                                                                grid-row: 2 / 3;
-                                                            }
-                                                            
-                                                            .bloc-hebergement figure {
-                                                                display: flex;
-                                                                flex-direction: column;
-                                                                background-color: white;
-                                                                border: 1px solid #F2F2F2;
-                                                                border-radius: 20px;
-                                                                height: 13em;
-                                                                width: 90%;
-                                                                padding: 4px;
-                                                                margin: 0;
-                                                            }
-                                                            
-                                                            .results-hebergements figcaption {
-                                                                height: 40%;
-                                                                padding-left: 1em;
-                                                                padding-bottom: 1em;
-                                                                padding-top: 0.5em;
-                                                                font-weight: 100;
-                                                                font-size: 10px;
-                                                                line-height: 5px;
-                                                                color: black;
-                                                            }
-                                                            
-                                                            .results-hebergements img {
-                                                                min-width: 0;
-                                                                min-height: 0;
-                                                                width: 100%;
-                                                                height: 100%;
-                                                                overflow: hidden;
-                                                                object-fit: cover;
-                                                                /* The image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit */
-                                                                border-radius: 12px 12px 0 0;
-                                                            }
-                                                            
-                                                            .btnAfficher-plus button {
-                                                                font-size: 13px;
-                                                                font-weight: 700;
-                                                                padding: 0.5em 1em;
-                                                            }
-                                                            
-                                                            .Aside-hebergement {
-                                                                display: flex;
-                                                                flex-direction: column;
-                                                                justify-content: center;
-                                                                align-items: flex-end;
-                                                                background-color: #F2F2F2;
-                                                                border-radius: 20px;
-                                                                margin-left: 2em;
-                                                                width: 35%;
-                                                            }
-                                                            
-                                                            .hebergement-populaires-title {
-                                                                display: flex;
-                                                                justify-content: space-around;
-                                                                align-items: center;
-                                                                width: 100%;
-                                                                padding: 1em;
-                                                            }
-                                                            
-                                                            .results-populaires {
-                                                                display: flex;
-                                                                flex-direction: column;
-                                                                justify-content: center;
-                                                                align-items: center;
-                                                                width: 100%;
-                                                                height: auto;
-                                                            }
-                                                            
-                                                            .results-populaires a {
-                                                                width: 80%;
-                                                                /* doesn't take the specs from figure because it's the parent but can't be handle like a figure -> link 
+    body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+    width: 100%;
+}
+
+h1,
+h2 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+h3,
+h4 {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+header {
+    width: 90%;
+    padding-left: 3em;
+}
+
+a,
+ul,
+li {
+    outline: none;
+    /* annule le formatage des liens */
+    text-decoration: none;
+    list-style-type: none;
+}
+
+ul a {
+    color: black;
+    /* for footer li */
+}
+
+nav a {
+    color: #0065FC;
+    /* change the color of links in Nav block */
+    font-weight: 300;
+    font-size: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* move them to the bottom */
+    height: 6em;
+    /* make bigger box around the elements for hoover effect */
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 60% 1fr 1fr 1fr;
+    width: 100%;
+    height: 6em;
+    /* to have space for the line when hoover */
+}
+
+.logo {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    justify-self: flex-start;
+    /* make it stay on the left */
+}
+
+.Hébergements {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.Activités {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    color: black;
+}
+
+.Inscription {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+}
+
+.Inscription p,
+.btn,
+.inputCity {
+    font-family: 'Raleway';
+    font-weight: 700;
+    /* make bold "S'inscrire" and buttons */
+}
+
+.Hébergements:hover,
+.Activités:hover {
+    border-top: 2px solid #0065FC;
+}
+
+.Activités p:hover {
+    color: #0065FC;
+}
+
+.Activités p {
+    color: black;
+}
+
+.titre-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: auto;
+    padding-top: 3em;
+    line-height: 1px;
+    /* reduce height of lines to make them closer */
+}
+
+.city-selector {
+    display: flex;
+    align-content: flex-start;
+    margin-top: 1em;
+}
+
+.form {
+    display: flex;
+    /* algin on main axis icon, Input and button */
+    height: 3.42em;
+    /* make match the height of the form with its button */
+}
+
+.mapIcon {
+    background-color: #F2F2F2;
+    border-radius: 12px 0 0 12px;
+    padding: 1.25em;
+    /* center the icon within its grey circle */
+    color: black;
+}
+
+.btnRechercher {
+    background-color: #0065FC;
+    border-radius: 0 12px 12px 0;
+    /* make rounded shape on specific corners */
+    height: 3em;
+    font-family: 'Raleway';
+    color: white;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.btnIcon {
+    display: none;
+}
+
+.inputCity {
+    border-top: 2px solid #F2F2F2;
+    border-bottom: 2px solid #F2F2F2;
+    border-left: none;
+    border-right: none;
+    padding-left: 1em;
+    padding-right: 2em;
+    font-family: 'Raleway';
+}
+
+ ::placeholder {
+    /* change the style of the input exemple */
+    color: black;
+    font-weight: 600;
+    opacity: 1;
+    /* Firefox */
+}
+
+button {
+    background-color: transparent;
+    outline: none;
+    /* unstylish button format */
+    border: none;
+    cursor: pointer;
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+    align-content: space-around;
+    justify-content: flex-start;
+    margin: auto;
+}
+
+.filters p {
+    font-weight: 400;
+    /* make it bolder */
+    font-size: 14px;
+}
+
+.Filters {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin: 1.5em;
+}
+
+.Filters div {
+    display: flex;
+    align-items: center;
+    border-right: 2px solid #F2F2F2;
+    border-top: 2px solid #F2F2F2;
+    border-bottom: 2px solid #F2F2F2;
+    border-radius: 30px;
+    /* make rounded corner on rightside */
+    margin-right: 1em;
+    padding-right: 1em;
+    height: 3em;
+}
+
+.Filters div:hover {
+    background-color: #F2F2F2;
+    color: #DEEBFF;
+    border-radius: 50px;
+    /* make hover stay inside the rounded shape instead of regular square shape */
+}
+
+.information-header {
+    display: flex;
+    align-items: center;
+    align-content: space-around;
+    justify-content: flex-start;
+}
+
+.Filters i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 14px;
+    color: #0065FC;
+    background-color: #DEEBFF;
+    height: 0.7em;
+    width: 0.7em;
+    padding: 1em;
+    /* center icon on light blue background circle */
+}
+
+.information-header i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 10px;
+    /* make i icon smaller */
+    border: 1px solid lightgrey;
+    color: #0065FC;
+    height: 7px;
+    width: 7px;
+    padding: 8px;
+    /* center the i icon */
+    margin-right: 0.5em;
+    /* make space between icon and text */
+}
+
+#bloc-hébergements {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    padding-left: 3em;
+    /* free space on left side */
+    width: 90%;
+}
+
+.bloc-hebergement {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: #F2F2F2;
+    height: auto;
+    width: 70%;
+    border-radius: 20px;
+    padding-left: 2em;
+}
+
+.results-hebergements {
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(5em, 18em));
+    column-gap: 1em;
+    row-gap: 1.5em;
+    margin-bottom: 2em;
+    width: 100%;
+    height: auto;
+}
+
+.Auberge-la-cannebiere {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.Hotel-du-port {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.Hotel-Les-mouettes {
+    grid-column: 3 / 4;
+    grid-row: 1/ 2;
+}
+
+.Hotel-de-la-mer {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.Auberge-Le-Panier {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.Hotel-chez-Amina {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+.bloc-hebergement figure {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid #F2F2F2;
+    box-shadow: 2px 3px 3px lightgrey;
+    border-radius: 20px;
+    height: 13em;
+    width: 90%;
+    padding: 4px;
+    margin: 0;
+}
+
+.results-hebergements figcaption {
+    height: 40%;
+    padding-left: 1em;
+    padding-bottom: 1em;
+    padding-top: 0.5em;
+    font-weight: 100;
+    font-size: 10px;
+    line-height: 5px;
+    color: black;
+}
+
+.results-hebergements img {
+    min-width: 0;
+    min-height: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    /* The image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit */
+    border-radius: 12px 12px 0 0;
+}
+
+.btnAfficher-plus button {
+    font-size: 13px;
+    font-weight: 700;
+    padding: 0.5em 1em;
+}
+
+.Aside-hebergement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    margin-left: 2em;
+    width: 30%;
+}
+
+.hebergement-populaires-title {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 1em;
+}
+
+.results-populaires {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.results-populaires a {
+    width: 80%;
+    /* doesn't take the specs from figure because it's the parent but can't be handle like a figure -> link 
     wouldn't be useful with grid layout be not necessary with 3 elements */
-                                                            }
-                                                            
-                                                            .results-populaires figure {
-                                                                display: flex;
-                                                                flex-direction: row;
-                                                                background-color: white;
-                                                                height: 8em;
-                                                                margin: 2em 0;
-                                                                padding: 4px;
-                                                                border-radius: 20px;
-                                                            }
-                                                            
-                                                            .results-populaires img {
-                                                                min-width: 0;
-                                                                min-height: 0;
-                                                                width: 100%;
-                                                                height: 100%;
-                                                                overflow: hidden;
-                                                                object-fit: cover;
-                                                                border-radius: 12px 0 0 12px;
-                                                                /* specific border-radius angle */
-                                                            }
-                                                            
-                                                            .results-populaires figcaption {
-                                                                height: 100%;
-                                                                width: 100%;
-                                                                padding: 0 1em;
-                                                                font-weight: 100;
-                                                                font-size: 10px;
-                                                                line-height: 12px;
-                                                                color: black;
-                                                            }
-                                                            
-                                                            .results-populaires figcaption p {
-                                                                margin: 0;
-                                                            }
-                                                            
-                                                            .results-populaires i {
-                                                                margin-top: 1.5em;
-                                                            }
-                                                            
-                                                            #bloc-activités {
-                                                                display: flex;
-                                                                flex-direction: column;
-                                                                justify-content: center;
-                                                                align-items: flex-start;
-                                                                padding-left: 3em;
-                                                                width: 90%;
-                                                                height: auto;
-                                                            }
-                                                            
-                                                            .results-activites {
-                                                                display: grid;
-                                                                grid-template-columns: repeat(autofill, minmax(10em, 20em));
-                                                                column-gap: 3em;
-                                                                row-gap: 2em;
-                                                                width: 100%;
-                                                                height: auto;
-                                                                padding-bottom: 1em;
-                                                            }
-                                                            
-                                                            .results-activites figcaption {
-                                                                padding-left: 1.25em;
-                                                                font-weight: 700;
-                                                            }
-                                                            
-                                                            .Vieux-port {
-                                                                grid-column: 1 / 2;
-                                                                grid-row: 1 / 3;
-                                                            }
-                                                            
-                                                            .Fort-de-Pomègues {
-                                                                grid-column: 2 / 3;
-                                                                grid-row: 1 / 2;
-                                                            }
-                                                            
-                                                            .Iles-du-Frioul {
-                                                                grid-row: 2 / 3;
-                                                                grid-column: 2 / 3;
-                                                            }
-                                                            
-                                                            .Parc-National-des-Calanques {
-                                                                grid-column: 3 / 4;
-                                                                grid-row: 1 / 3;
-                                                            }
-                                                            
-                                                            .Notre-Dame-de-la-Garde {
-                                                                grid-column: 4 / 5;
-                                                                grid-row: 1 / 2;
-                                                            }
-                                                            
-                                                            .Parc-Longchamp {
-                                                                grid-row: 2 / 3;
-                                                                grid-column: 4 / 5;
-                                                            }
-                                                            
-                                                            .Vieux-port figure,
-                                                            .Parc-National-des-Calanques figure {
-                                                                display: flex;
-                                                                flex-direction: column;
-                                                                border-radius: 15px;
-                                                                color: black;
-                                                                font-weight: 400;
-                                                                height: 28em;
-                                                                width: 100%;
-                                                                overflow: hidden;
-                                                                margin: 0;
-                                                                box-shadow: 2px 5px 5px #F2F2F2;
-                                                            }
-                                                            
-                                                            .Iles-du-Frioul figure {
-                                                                display: flex;
-                                                                flex-direction: column;
-                                                                border-radius: 15px;
-                                                                color: black;
-                                                                font-weight: 400;
-                                                                height: 11em;
-                                                                width: 100%;
-                                                                overflow: hidden;
-                                                                margin: 0;
-                                                                padding-top: 0.5em;
-                                                                box-shadow: 2px 5px 5px #F2F2F2;
-                                                            }
-                                                            
-                                                            .Fort-de-Pomègues figure {
-                                                                display: flex;
-                                                                flex-direction: column;
-                                                                border-radius: 15px;
-                                                                color: black;
-                                                                font-weight: 400;
-                                                                height: 14em;
-                                                                width: 100%;
-                                                                overflow: hidden;
-                                                                margin: 0;
-                                                                box-shadow: 2px 5px 5px #F2F2F2;
-                                                            }
-                                                            
-                                                            .Notre-Dame-de-la-Garde figure,
-                                                            .Parc-Longchamp figure {
-                                                                display: flex;
-                                                                flex-direction: column;
-                                                                border-radius: 20px;
-                                                                color: black;
-                                                                font-weight: 400;
-                                                                height: 11.5em;
-                                                                width: 100%;
-                                                                overflow: hidden;
-                                                                margin: 0;
-                                                                box-shadow: 0 5px 2px #F2F2F2;
-                                                            }
-                                                            
-                                                            .results-activites img {
-                                                                min-width: 0;
-                                                                min-height: 0;
-                                                                width: 100%;
-                                                                height: 100%;
-                                                                overflow: hidden;
-                                                                object-fit: cover;
-                                                                border-radius: 12px 12px 0 0;
-                                                            }
-                                                            
-                                                            .Notre-Dame-de-la-Garde img {
-                                                                object-position: 0 3px;
-                                                                /* move down a bit the image in its box */
-                                                            }
-                                                            
-                                                            .Iles-du-Frioul img {
-                                                                object-position: 0 -10px;
-                                                            }
-                                                            
-                                                            .Parc-National-des-Calanques img {
-                                                                filter: brightness(130%);
-                                                            }
-                                                            
-                                                            footer {
-                                                                display: flex;
-                                                                justify-content: space-between;
-                                                                align-content: center;
-                                                                background-color: #F2F2F2;
-                                                                background-size: cover;
-                                                                margin-top: 3em;
-                                                                padding-top: 3em;
-                                                                line-height: 2em;
-                                                                height: 12em;
-                                                                width: 100%;
-                                                            }
-                                                            
-                                                            footer div {
-                                                                margin-right: 13em;
-                                                                color: black;
-                                                            }
-                                                            
-                                                            @media screen and (min-width: 768px) and (max-width: 992px) {
-                                                                header,
-                                                                #bloc-hébergements,
-                                                                .Aside-hebergement,
-                                                                #bloc-activités {
-                                                                    width: 99%;
-                                                                    /* don't know why but doesn't fit the screen at 100% */
-                                                                    height: auto;
-                                                                    margin: 0 0.5em;
-                                                                    /* thin free space aroung main elements */
-                                                                    padding: 0;
-                                                                }
-                                                                .bloc-hebergement {
-                                                                    padding: 1em 2em;
-                                                                    width: 55%;
-                                                                }
-                                                                .Aside-hebergement {
-                                                                    justify-content: flex-start;
-                                                                    width: 40%;
-                                                                    margin: 0 1em;
-                                                                }
-                                                                .results-populaires figcaption {
-                                                                    font-size: 10px;
-                                                                    line-height: 10px;
-                                                                }
-                                                                #bloc-activités {
-                                                                    margin-top: 4em;
-                                                                    padding: 0 2em;
-                                                                    height: auto;
-                                                                }
-                                                                .results-activites {
-                                                                    grid-template-columns: 40% 60%;
-                                                                    grid-template-rows: repeat(4, minmax(10em, 25em));
-                                                                    column-gap: 1em;
-                                                                    row-gap: 1em;
-                                                                    width: 95%;
-                                                                }
-                                                                .Parc-National-des-Calanques {
-                                                                    grid-column: 1 / 2;
-                                                                    grid-row: 3 / 5;
-                                                                }
-                                                                .Notre-Dame-de-la-Garde {
-                                                                    grid-column: 2 / 3;
-                                                                    grid-row: 3 / 4;
-                                                                }
-                                                                .Parc-Longchamp {
-                                                                    grid-column: 2 / 3;
-                                                                    grid-row: 4 / 5;
-                                                                }
-                                                                .results-activites figure {
-                                                                    height: 100%;
-                                                                    margin: 0;
-                                                                    padding: 0;
-                                                                }
-                                                                footer {
-                                                                    margin: 0;
-                                                                    margin-top: 4em;
-                                                                    padding: 0 1em;
-                                                                    line-height: 20px;
-                                                                    width: 100%;
-                                                                }
-                                                                footer div {
-                                                                    margin-right: 6em;
-                                                                }
-                                                            }
-                                                            /* Small devices (portrait tablets and large phones, 600px and up) */
-                                                            
-                                                            @media only screen and (max-width: 768px) {
-                                                                body,
-                                                                header,
-                                                                #bloc-hébergements,
-                                                                #bloc-activités {
-                                                                    margin: 0;
-                                                                    padding: 0;
-                                                                    width: 100%;
-                                                                    height: auto;
-                                                                    font-size: 14px;
-                                                                }
-                                                                h1,
-                                                                h2 {
-                                                                    font-size: 20px;
-                                                                }
-                                                                h3,
-                                                                h4,
-                                                                .btnAfficher-plus button {
-                                                                    font-size: 16px;
-                                                                }
-                                                                nav a {
-                                                                    font-size: 16px;
-                                                                    height: auto;
-                                                                    width: 100%;
-                                                                    padding: 0;
-                                                                    margin: 0;
-                                                                }
-                                                                nav {
-                                                                    display: grid;
-                                                                    grid-template-columns: 50% 50%;
-                                                                    grid-template-rows: 70% 30%;
-                                                                    align-items: center;
-                                                                    height: 9em;
-                                                                    margin-top: 0;
-                                                                    padding-top: 0;
-                                                                    width: 100%;
-                                                                }
-                                                                .logo {
-                                                                    grid-column: 1 / 2;
-                                                                    grid-row: 1 / 2;
-                                                                    height: auto;
-                                                                    width: 100%;
-                                                                }
-                                                                .logo img {
-                                                                    padding-right: 3em;
-                                                                    /* doesn't on the parent box because its a link box */
-                                                                }
-                                                                .Hébergements {
-                                                                    grid-column: 1 / 2;
-                                                                    grid-row: 2 / 3;
-                                                                    height: auto;
-                                                                    width: 100%;
-                                                                    border-bottom: 3px solid #0065FC;
-                                                                }
-                                                                .Activités {
-                                                                    grid-column: 2 / 3;
-                                                                    grid-row: 2 / 3;
-                                                                    height: auto;
-                                                                    width: 100%;
-                                                                    border-bottom: 3px solid #F2F2F2;
-                                                                }
-                                                                .Activités:hover {
-                                                                    border-top: 0;
-                                                                    border-bottom: 3px solid #0065FC;
-                                                                }
-                                                                .Inscription {
-                                                                    grid-column: 2 / 3;
-                                                                    grid-row: 1 / 2;
-                                                                    padding-left: 2em;
-                                                                    height: auto;
-                                                                    width: 100%;
-                                                                }
-                                                                .titre-header {
-                                                                    display: flex;
-                                                                    flex-direction: column;
-                                                                    justify-content: center;
-                                                                    align-items: flex-start;
-                                                                    flex-wrap: wrap;
-                                                                    height: auto;
-                                                                    padding-top: 1em;
-                                                                    padding-left: 1.5em;
-                                                                    line-height: 25px;
-                                                                    width: 80%;
-                                                                }
-                                                                .titre-header p {
-                                                                    font-size: 15px;
-                                                                    line-height: 5px;
-                                                                    margin: 0;
-                                                                }
-                                                                .city-selector {
-                                                                    width: 100%;
-                                                                    height: 3.6em;
-                                                                    margin: 0 0 0 1em;
-                                                                    /* center the form */
-                                                                    padding: 2em 1em;
-                                                                }
-                                                                .mapIcon {
-                                                                    padding: 1em;
-                                                                    /* center the icon */
-                                                                    font-size: 18px;
-                                                                }
-                                                                .inputCity {
-                                                                    font-size: 16px;
-                                                                }
-                                                                .btnRechercher {
-                                                                    display: none;
-                                                                    /* replacing "Rechercher" by an icon */
-                                                                }
-                                                                .btnIcon {
-                                                                    display: initial;
-                                                                    /* make icon great again */
-                                                                    background-color: #0065FC;
-                                                                    border-radius: 12px;
-                                                                    /* make rounded shape on specific corners */
-                                                                    height: 3.8em;
-                                                                    color: white;
-                                                                    padding: 0 1.25em 0 1.25em;
-                                                                    /* center the icon */
-                                                                }
-                                                                .filters {
-                                                                    display: flex;
-                                                                    flex-direction: column;
-                                                                    justify-content: center;
-                                                                    align-items: flex-start;
-                                                                    padding-left: 1.5em;
-                                                                }
-                                                                .Filters {
-                                                                    display: flex;
-                                                                    justify-content: flex-start;
-                                                                    align-content: space-around;
-                                                                    padding: 0;
-                                                                    margin: 0;
-                                                                }
-                                                                .Filters div {
-                                                                    border-right: 2px solid lightgrey;
-                                                                    border-top: 2px solid lightgrey;
-                                                                    border-bottom: 2px solid lightgrey;
-                                                                    margin-bottom: 0.75em;
-                                                                    padding-top: ;
-                                                                    font-size: 15px;
-                                                                }
-                                                                .filters i {
-                                                                    font-size: 18px;
-                                                                }
-                                                                .Filters button {
-                                                                    font-size: 15px;
-                                                                }
-                                                                .information-header i {
-                                                                    font-size: 12px;
-                                                                    margin: 1em 1em 0 0;
-                                                                }
-                                                                .information-header {
-                                                                    display: flex;
-                                                                    justify-content: flex-start;
-                                                                    align-items: flex-start;
-                                                                    padding-left: 1.5em;
-                                                                    font-size: 16px;
-                                                                }
-                                                                #bloc-hébergements {
-                                                                    display: flex;
-                                                                    flex-direction: column-reverse;
-                                                                    width: 100%;
-                                                                }
-                                                                .bloc-hebergement,
-                                                                .Aside-hebergement,
-                                                                .results-populaires,
-                                                                .results-hebergements,
-                                                                .results-activites {
-                                                                    justify-content: center;
-                                                                    align-items: flex-start;
-                                                                    width: 100%;
-                                                                    margin: 1em 0;
-                                                                }
-                                                                .Aside-hebergement {
-                                                                    border-radius: 0;
-                                                                }
-                                                                .hebergement-populaires-title {
-                                                                    display: flex;
-                                                                    justify-content: space-between;
-                                                                    align-items: center;
-                                                                    width: 90%;
-                                                                }
-                                                                .results-populaires a {
-                                                                    width: 90%;
-                                                                    margin-left: 1em;
-                                                                }
-                                                                .results-populaires figure {
-                                                                    height: 10em;
-                                                                    margin: 0.35em 0;
-                                                                }
-                                                                .results-populaires img {
-                                                                    width: 80%;
-                                                                }
-                                                                .results-populaires figcaption {
-                                                                    font-size: 12px;
-                                                                    line-height: 20px;
-                                                                    padding-right: 2em;
-                                                                }
-                                                                .bloc-hebergement {
-                                                                    padding: 1em;
-                                                                    background-color: white;
-                                                                }
-                                                                .results-hebergements {
-                                                                    display: flex;
-                                                                    flex-direction: column;
-                                                                    justify-content: center;
-                                                                    align-items: center;
-                                                                    margin-right: 2em;
-                                                                    width: 100%;
-                                                                }
-                                                                .results-hebergements p {
-                                                                    font-size: 14px;
-                                                                }
-                                                                #bloc-activités {
-                                                                    display: flex;
-                                                                    flex-direction: column;
-                                                                    width: 100%;
-                                                                    margin: 0 1em;
-                                                                }
-                                                                .results-activites {
-                                                                    display: flex;
-                                                                    flex-direction: column;
-                                                                    justify-content: center;
-                                                                    align-items: center;
-                                                                }
-                                                                .results-activites figure {
-                                                                    height: 12em;
-                                                                    width: 90%;
-                                                                    margin: 0;
-                                                                    padding: 0;
-                                                                    box-shadow: 0 5px 5px lightgrey;
-                                                                }
-                                                                footer {
-                                                                    display: flex;
-                                                                    flex-direction: column;
-                                                                    justify-content: flex-start;
-                                                                    align-items: flex-start;
-                                                                    margin: 1em 0 0em 0;
-                                                                    padding: 0;
-                                                                    height: 35em;
-                                                                }
-                                                                footer div {
-                                                                    margin: 0;
-                                                                }
-                                                                footer ul {
-                                                                    padding: 0 2em;
-                                                                    font-size: 14px;
-                                                                }
+}
+
+.results-populaires figure {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    box-shadow: 2px 3px 3px lightgrey;
+    height: 8em;
+    margin: 2em 0;
+    padding: 4px;
+    border-radius: 20px;
+}
+
+.results-populaires img {
+    min-width: 0;
+    min-height: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 12px 0 0 12px;
+    /* specific border-radius angle */
+}
+
+.results-populaires figcaption {
+    height: 100%;
+    width: 100%;
+    padding: 0 1em;
+    font-weight: 100;
+    font-size: 10px;
+    line-height: 12px;
+    color: black;
+}
+
+.results-populaires figcaption p {
+    margin: 0;
+}
+
+.results-populaires i {
+    margin-top: 1.5em;
+}
+
+#bloc-activités {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 3em;
+    width: 90%;
+    height: auto;
+}
+
+.results-activites {
+    display: grid;
+    grid-template-columns: repeat(autofill, minmax(10em, 20em));
+    column-gap: 3em;
+    row-gap: 2em;
+    width: 100%;
+    height: auto;
+    padding-bottom: 1em;
+}
+
+.results-activites figcaption {
+    padding-left: 1.25em;
+    font-weight: 700;
+}
+
+.Vieux-port {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.Fort-de-Pomègues {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.Iles-du-Frioul {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+.Parc-National-des-Calanques {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+}
+
+.Notre-Dame-de-la-Garde {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+}
+
+.Parc-Longchamp {
+    grid-row: 2 / 3;
+    grid-column: 4 / 5;
+}
+
+.Vieux-port figure,
+.Parc-National-des-Calanques figure {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    color: black;
+    font-weight: 400;
+    height: 28em;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    box-shadow: 2px 3px 3px lightgrey;
+}
+
+.Iles-du-Frioul figure {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    color: black;
+    font-weight: 400;
+    height: 11em;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding-top: 0.5em;
+    box-shadow: 2px 3px 3px lightgrey;
+}
+
+.Fort-de-Pomègues figure {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    color: black;
+    font-weight: 400;
+    height: 14em;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    box-shadow: 2px 3px 3px lightgrey;
+}
+
+.Notre-Dame-de-la-Garde figure,
+.Parc-Longchamp figure {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    color: black;
+    font-weight: 400;
+    height: 11.5em;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    box-shadow: 2px 3px 3px lightgrey;
+}
+
+.results-activites img {
+    min-width: 0;
+    min-height: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.Notre-Dame-de-la-Garde img {
+    object-position: 0 3px;
+    /* move down a bit the image in its box */
+}
+
+.Iles-du-Frioul img {
+    object-position: 0 -10px;
+}
+
+.Parc-National-des-Calanques img {
+    filter: brightness(130%);
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background-color: #F2F2F2;
+    background-size: cover;
+    margin-top: 3em;
+    padding-top: 3em;
+    line-height: 2em;
+    height: 12em;
+    width: 100%;
+}
+
+footer div {
+    margin-right: 13em;
+    color: black;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    header,
+    #bloc-hébergements,
+    .Aside-hebergement,
+    #bloc-activités {
+        width: 99%;
+        /* don't know why but doesn't fit the screen at 100% */
+        height: auto;
+        margin: 0 0.5em;
+        /* thin free space aroung main elements */
+        padding: 0;
+    }
+    .bloc-hebergement {
+        padding: 1em 2em;
+        width: 55%;
+    }
+    .Aside-hebergement {
+        justify-content: flex-start;
+        width: 40%;
+        margin: 0 1em;
+    }
+    .results-populaires figcaption {
+        font-size: 10px;
+        line-height: 10px;
+    }
+    #bloc-activités {
+        margin-top: 4em;
+        padding: 0 2em;
+        height: auto;
+    }
+    .results-activites {
+        grid-template-columns: 40% 60%;
+        grid-template-rows: repeat(4, minmax(10em, 25em));
+        column-gap: 1em;
+        row-gap: 1em;
+        width: 95%;
+    }
+    .Parc-National-des-Calanques {
+        grid-column: 1 / 2;
+        grid-row: 3 / 5;
+    }
+    .Notre-Dame-de-la-Garde {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+    }
+    .Parc-Longchamp {
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+    }
+    .results-activites figure {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    footer {
+        margin: 0;
+        margin-top: 4em;
+        padding: 0 1em;
+        line-height: 20px;
+        width: 100%;
+    }
+    footer div {
+        margin-right: 6em;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (max-width: 768px) {
+    body,
+    header,
+    #bloc-hébergements,
+    #bloc-activités {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: auto;
+        font-size: 14px;
+    }
+    h1,
+    h2 {
+        font-size: 20px;
+    }
+    h3,
+    h4,
+    .btnAfficher-plus button {
+        font-size: 16px;
+    }
+    nav a {
+        font-size: 16px;
+        height: auto;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    nav {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 70% 30%;
+        align-items: center;
+        height: 9em;
+        margin-top: 0;
+        padding-top: 0;
+        width: 100%;
+    }
+    .logo {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        height: auto;
+        width: 100%;
+    }
+    .logo img {
+        padding-right: 3em;
+        /* doesn't on the parent box because its a link box */
+    }
+    .Hébergements {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        height: auto;
+        width: 100%;
+        border-bottom: 3px solid #0065FC;
+    }
+    .Activités {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        height: auto;
+        width: 100%;
+        border-bottom: 3px solid #F2F2F2;
+    }
+    .Activités:hover {
+        border-top: 0;
+        border-bottom: 3px solid #0065FC;
+    }
+    .Inscription {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        padding-left: 2em;
+        height: auto;
+        width: 100%;
+    }
+    .titre-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        height: auto;
+        padding-top: 1em;
+        padding-left: 1.5em;
+        line-height: 25px;
+        width: 80%;
+    }
+    .titre-header p {
+        font-size: 15px;
+        line-height: 5px;
+        margin: 0;
+    }
+    .city-selector {
+        width: 100%;
+        height: 3.6em;
+        margin: 0 0 0 1em;
+        /* center the form */
+        padding: 2em 1em;
+    }
+    .mapIcon {
+        padding: 1em;
+        /* center the icon */
+        font-size: 18px;
+    }
+    .inputCity {
+        font-size: 16px;
+    }
+    .btnRechercher {
+        display: none;
+        /* replacing "Rechercher" by an icon */
+    }
+    .btnIcon {
+        display: initial;
+        /* make icon great again */
+        background-color: #0065FC;
+        border-radius: 12px;
+        /* make rounded shape on specific corners */
+        height: 3.8em;
+        color: white;
+        padding: 0 1.25em 0 1.25em;
+        /* center the icon */
+    }
+    .filters {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 1.5em;
+    }
+    .Filters {
+        display: flex;
+        justify-content: flex-start;
+        align-content: space-around;
+        padding: 0;
+        margin: 0;
+    }
+    .Filters div {
+        border-right: 2px solid lightgrey;
+        border-top: 2px solid lightgrey;
+        border-bottom: 2px solid lightgrey;
+        margin-bottom: 0.75em;
+        padding-top: ;
+        font-size: 15px;
+    }
+    .filters i {
+        font-size: 18px;
+    }
+    .Filters button {
+        font-size: 15px;
+    }
+    .information-header i {
+        font-size: 12px;
+        margin: 1em 1em 0 0;
+    }
+    .information-header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 1.5em;
+        font-size: 16px;
+    }
+    #bloc-hébergements {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    .bloc-hebergement,
+    .Aside-hebergement,
+    .results-populaires,
+    .results-hebergements,
+    .results-activites {
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        margin: 1em 0;
+    }
+    .Aside-hebergement {
+        border-radius: 0;
+    }
+    .hebergement-populaires-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+    }
+    .results-populaires a {
+        width: 90%;
+        margin-left: 1em;
+    }
+    .results-populaires figure {
+        height: 10em;
+        margin: 0.35em 0;
+    }
+    .results-populaires img {
+        width: 80%;
+    }
+    .results-populaires figcaption {
+        font-size: 12px;
+        line-height: 20px;
+        padding-right: 2em;
+    }
+    .bloc-hebergement {
+        padding: 1em;
+        background-color: white;
+    }
+    .results-hebergements {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 2em;
+        width: 100%;
+    }
+    .results-hebergements p {
+        font-size: 14px;
+    }
+    #bloc-activités {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 1em;
+    }
+    .results-activites {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .results-activites figure {
+        height: 12em;
+        width: 90%;
+        margin: 0;
+        padding: 0;
+        box-shadow: 0 5px 5px lightgrey;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 2em 0 0em 0;
+        padding: 2em 0 0 0;
+        height: 35em;
+    }
+    footer div {
+        margin: 0;
+    }
+    footer ul {
+        padding: 0 2em;
+        font-size: 14px;
+    }
