@@ -1,4 +1,4 @@
-    body {
+body {
     font-family: 'Raleway', sans-serif;
     font-size: 12px;
     font-weight: 200;
@@ -443,7 +443,7 @@ button {
 
 .results-activites {
     display: grid;
-    grid-template-columns: repeat(autofill, minmax(10em, 20em));
+    grid-template-columns: repeat( auto-fill, minmax(10em, 20em));
     column-gap: 3em;
     row-gap: 2em;
     width: 100%;
@@ -649,7 +649,7 @@ footer div {
 }
 
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Small devices (portrait tablets and large phones, less than 600px) */
 
 @media only screen and (max-width: 768px) {
     body,
@@ -789,8 +789,7 @@ footer div {
         border-top: 2px solid lightgrey;
         border-bottom: 2px solid lightgrey;
         margin-bottom: 0.75em;
-        padding-top: ;
-        font-size: 15px;
+        font-size: 14px;
     }
     .filters i {
         font-size: 18px;
@@ -899,3 +898,4 @@ footer div {
         padding: 0 2em;
         font-size: 14px;
     }
+}
