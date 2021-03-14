@@ -22,26 +22,6 @@ header {
     padding-left: 3em;
 }
 
-.top-header {
-    display: flex;
-    justify-content: space-between;
-    height: 5em;
-}
-
-.logo {
-    padding-top: 2em;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    /* align elements at the bottom of nav block */
-    height: 5em;
-    /* make space between elements on main axis */
-    padding-top: 1em;
-}
-
 a,
 ul,
 li {
@@ -61,15 +41,43 @@ nav a {
     /* change the color of links in Nav block */
     font-weight: 300;
     font-size: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* move them to the bottom */
+    height: 6em;
+    /* make bigger box around the elements for hoover effect */
 }
 
-nav div {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    height: 6.4em;
-    width: 7em;
-    padding: 0 1em;
+nav {
+    display: grid;
+    grid-template-columns: 60% 1fr 1fr 1fr;
+    width: 100%;
+    height: 6em;
+    /* to have space for the line when hoover */
+}
+
+.logo {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    justify-self: flex-start;
+    /* make it stay on the left */
+}
+
+.Hébergements {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.Activités {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    color: black;
+}
+
+.Inscription {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
 }
 
 .Inscription p,
@@ -80,10 +88,17 @@ nav div {
     /* make bold "S'inscrire" and buttons */
 }
 
-.Hébergement:hover,
+.Hébergements:hover,
 .Activités:hover {
-    border-top: 3px solid #0065FC;
-    color: #DEEBFF;
+    border-top: 2px solid #0065FC;
+}
+
+.Activités p:hover {
+    color: #0065FC;
+}
+
+.Activités p {
+    color: black;
 }
 
 .titre-header {
@@ -91,7 +106,8 @@ nav div {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    height: 4em;
+    flex-wrap: wrap;
+    height: auto;
     padding-top: 3em;
     line-height: 1px;
     /* reduce height of lines to make them closer */
@@ -108,7 +124,7 @@ nav div {
     /* algin on main axis icon, Input and button */
 }
 
-.city-selector i {
+.mapIcon {
     background-color: #F2F2F2;
     border-radius: 12px 0 0 12px;
     padding: 1.25em;
@@ -127,6 +143,10 @@ nav div {
     padding-right: 1em;
 }
 
+.btnIcon {
+    display: none;
+}
+
 .inputCity {
     border-top: 2px solid #F2F2F2;
     border-bottom: 2px solid #F2F2F2;
@@ -135,7 +155,13 @@ nav div {
     padding-left: 1em;
     padding-right: 2em;
     font-family: 'Raleway';
+}
+
+::placeholder {
     color: black;
+    font-weight: 600;
+    opacity: 1;
+    /* Firefox */
 }
 
 button {
@@ -170,6 +196,7 @@ button {
 
 .Filters div {
     display: flex;
+    align-items: center;
     border-right: 2px solid #F2F2F2;
     border-top: 2px solid #F2F2F2;
     border-bottom: 2px solid #F2F2F2;
@@ -177,6 +204,7 @@ button {
     /* make rounded corner on rightside */
     margin-right: 1em;
     padding-right: 1em;
+    height: 3em;
 }
 
 .Filters div:hover {
@@ -195,29 +223,33 @@ button {
 
 .Filters i {
     display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
+    font-size: 14px;
     color: #0065FC;
     background-color: #DEEBFF;
-    height: 1em;
-    width: 1em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    padding-right: 1em;
-    padding-left: 0.95em;
+    height: 0.7em;
+    width: 0.7em;
+    padding: 1em;
     /* center icon on light blue background circle */
 }
 
 .information-header i {
     display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
-    border: 1px solid #F2F2F2;
+    font-size: 10px;
+    /* make i icon smaller */
+    border: 1px solid lightgrey;
     color: #0065FC;
     height: 7px;
     width: 7px;
-    padding: 5px;
-    padding-left: 8px;
-    padding-bottom: 7px;
+    padding: 8px;
+    /* center the i icon */
     margin-right: 0.5em;
+    /* make space between icon and text */
 }
 
 #bloc-hébergements {
@@ -236,15 +268,12 @@ button {
     align-items: flex-start;
     background-color: #F2F2F2;
     height: auto;
-    width: 62%;
+    width: 70%;
     border-radius: 20px;
-    padding-left: 3em;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-left: 2em;
 }
 
 .results-hebergements {
-    justify-content: center;
     display: grid;
     grid-template-columns: repeat( auto-fill, minmax(5em, 18em));
     column-gap: 1em;
@@ -292,7 +321,7 @@ button {
     border-radius: 20px;
     height: 13em;
     width: 90%;
-    padding: 6px;
+    padding: 4px;
     margin: 0;
 }
 
@@ -321,17 +350,18 @@ button {
 .btnAfficher-plus button {
     font-size: 13px;
     font-weight: 700;
+    padding: 0.5em 1em;
 }
 
 .Aside-hebergement {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-end;
     background-color: #F2F2F2;
     border-radius: 20px;
-    width: 30%;
     margin-left: 2em;
+    width: 35%;
 }
 
 .hebergement-populaires-title {
@@ -345,24 +375,27 @@ button {
 .results-populaires {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 100%;
     height: auto;
-    margin-bottom: 4em;
-    padding-right: 1em;
+}
+
+.results-populaires a {
+    width: 80%;
+    /* doesn't take the specs from figure because it's the parent but can't be handle like a figure -> link 
+    wouldn't be useful with grid layout be not necessary with 3 elements */
 }
 
 .results-populaires figure {
     display: flex;
     flex-direction: row;
+    background-color: white;
     height: 8em;
-    width: 100%;
-    margin-bottom: 2em;
+    margin: 2em 0;
+    padding: 4px;
+    border-radius: 20px;
 }
-
-
-/* the next part is not useless: specific border-radius angle */
 
 .results-populaires img {
     min-width: 0;
@@ -372,16 +405,16 @@ button {
     overflow: hidden;
     object-fit: cover;
     border-radius: 12px 0 0 12px;
+    /* specific border-radius angle */
 }
 
 .results-populaires figcaption {
     height: 100%;
     width: 100%;
-    padding-left: 1em;
-    padding-right: 3em;
+    padding: 0 1em;
     font-weight: 100;
     font-size: 10px;
-    line-height: 1.2em;
+    line-height: 12px;
     color: black;
 }
 
@@ -397,7 +430,7 @@ button {
 
 .results-activites {
     display: grid;
-    grid-template-columns: repeat( autofill, minmax(10em, 20em));
+    grid-template-columns: repeat(autofill, minmax(10em, 20em));
     column-gap: 3em;
     row-gap: 2em;
     width: 100%;
@@ -520,8 +553,8 @@ button {
 
 footer {
     display: flex;
-    justify-content: flex-start;
-    align-content: space-around;
+    justify-content: space-between;
+    align-content: center;
     background-color: #F2F2F2;
     background-size: cover;
     margin-top: 3em;
@@ -532,12 +565,11 @@ footer {
 }
 
 footer div {
-    margin-right: 10em;
+    margin-right: 13em;
     color: black;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-    body,
     header,
     #bloc-hébergements,
     .Aside-hebergement,
@@ -545,12 +577,9 @@ footer div {
         width: 99%;
         /* don't know why but doesn't fit the screen at 100% */
         height: auto;
-        margin: 0.5em;
+        margin: 0 0.5em;
+        /* thin free space aroung main elements */
         padding: 0;
-    }
-    nav div {
-        height: 5.9em;
-        width: 7em;
     }
     .bloc-hebergement {
         padding: 1em 2em;
@@ -559,7 +588,11 @@ footer div {
     .Aside-hebergement {
         justify-content: flex-start;
         width: 40%;
-        height: auto;
+        margin: 0 1em;
+    }
+    .results-populaires figcaption {
+        font-size: 10px;
+        line-height: 10px;
     }
     #bloc-activités {
         margin-top: 4em;
@@ -593,8 +626,7 @@ footer div {
     footer {
         margin: 0;
         margin-top: 4em;
-        padding-bottom: 1em;
-        padding-top: 1em;
+        padding: 0 1em;
         line-height: 20px;
         width: 100%;
     }
@@ -607,5 +639,158 @@ footer div {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 
 @media only screen and (max-width: 768px) {
-    todo
+    body,
+    header,
+    #bloc-hébergements,
+    #bloc-activités {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: auto;
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    nav a {
+        font-size: 16px;
+        height: auto;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    nav {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 70% 30%;
+        align-items: center;
+        height: 9em;
+        margin-top: 0;
+        padding-top: 0;
+        width: 100%;
+    }
+    .logo {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        height: auto;
+        width: 100%;
+    }
+    .logo img {
+        padding-right: 3em;
+        /* doesn't on the parent box because its a link box */
+    }
+    .Hébergements {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        height: auto;
+        width: 100%;
+        border-bottom: 3px solid #0065FC;
+    }
+    .Activités {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        height: auto;
+        width: 100%;
+        border-bottom: 3px solid #F2F2F2;
+    }
+    .Activités:hover {
+        border-top: 0;
+        border-bottom: 3px solid #0065FC;
+    }
+    .Inscription {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        padding-left: 2em;
+        height: auto;
+        width: 100%;
+    }
+    .titre-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        height: auto;
+        padding-top: 1em;
+        padding-left: 1.5em;
+        line-height: 25px;
+        width: 80%;
+    }
+    .titre-header p {
+        font-size: 15px;
+        line-height: 5px;
+        margin: 0;
+    }
+    .city-selector {
+        width: 100%;
+        height: 3.6em;
+        margin: 0 0 0 1em;
+        /* center the form */
+        padding: 2em 1em;
+    }
+    .mapIcon {
+        padding: 1em;
+        /* center the icon */
+        font-size: 18px;
+    }
+    .inputCity {
+        font-size: 16px;
+    }
+    .btnRechercher {
+        display: none;
+        /* replacing "Rechercher" by an icon */
+    }
+    .btnIcon {
+        display: initial;
+        /* make icon great again */
+        background-color: #0065FC;
+        border-radius: 12px;
+        /* make rounded shape on specific corners */
+        height: 3.8em;
+        color: white;
+        padding: 0 1.25em 0 1.25em;
+        /* center the icon */
+    }
+    .filters {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 1.5em;
+    }
+    .Filters {
+        display: flex;
+        justify-content: flex-start;
+        align-content: space-around;
+        padding: 0;
+        margin: 0;
+    }
+    .Filters div {
+        border-right: 2px solid lightgrey;
+        border-top: 2px solid lightgrey;
+        border-bottom: 2px solid lightgrey;
+        margin-bottom: 0.75em;
+        padding-top: ;
+        font-size: 15px;
+    }
+    .filters i {
+        font-size: 18px;
+    }
+    .Filters button {
+        font-size: 15px;
+    }
+    .information-header i {
+        font-size: 12px;
+        margin: 1em 1em 0 0;
+    }
+    .information-header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 1.5em;
+        font-size: 16px;
+    }
 }
