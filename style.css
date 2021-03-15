@@ -20,6 +20,7 @@ h4 {
 header {
     width: 90%;
     padding-left: 3em;
+    margin-bottom: 3em;
 }
 
 a,
@@ -64,12 +65,12 @@ nav {
     /* make it stay on the left */
 }
 
-.Hébergements {
+.Hebergements {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
 }
 
-.Activités {
+.Activites {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
     color: black;
@@ -88,16 +89,16 @@ nav {
     /* make bold "S'inscrire" and buttons */
 }
 
-.Hébergements:hover,
-.Activités:hover {
+.Hebergements:hover,
+.Activites:hover {
     border-top: 2px solid #0065FC;
 }
 
-.Activités p:hover {
+.Activites p:hover {
     color: #0065FC;
 }
 
-.Activités p {
+.Activites p {
     color: black;
 }
 
@@ -255,7 +256,7 @@ button {
     /* make space between icon and text */
 }
 
-#bloc-hébergements {
+#bloc-hebergements {
     display: flex;
     justify-content: space-between;
     height: 100%;
@@ -431,7 +432,7 @@ button {
     margin-top: 1.5em;
 }
 
-#bloc-activités {
+#bloc-activites {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -439,6 +440,7 @@ button {
     padding-left: 3em;
     width: 90%;
     height: auto;
+    margin-top: 3em;
 }
 
 .results-activites {
@@ -461,7 +463,7 @@ button {
     grid-row: 1 / 3;
 }
 
-.Fort-de-Pomègues {
+.Fort-de-Pomegues {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
 }
@@ -514,7 +516,7 @@ button {
     box-shadow: 2px 3px 3px lightgrey;
 }
 
-.Fort-de-Pomègues figure {
+.Fort-de-Pomegues figure {
     display: flex;
     flex-direction: column;
     border-radius: 15px;
@@ -585,9 +587,9 @@ footer div {
 @media screen and (min-width: 768px) and (max-width: 992px) {
     body,
     header,
-    #bloc-hébergements,
+    #bloc-hebergements,
     .Aside-hebergement,
-    #bloc-activités {
+    #bloc-activites {
         width: 100%;
         margin: 0;
         height: auto;
@@ -598,7 +600,8 @@ footer div {
         width: 95%;
         padding-left: 1em;
     }
-    #bloc-hébergements {
+    #bloc-hebergements {
+        width: 98%;
         padding-left: 1em;
     }
     .bloc-hebergement {
@@ -618,7 +621,7 @@ footer div {
         font-size: 10px;
         line-height: 10px;
     }
-    #bloc-activités {
+    #bloc-activites {
         margin-top: 4em;
         height: auto;
         padding-left: 1em;
@@ -629,7 +632,7 @@ footer div {
         grid-template-rows: repeat(4, minmax(10em, 25em));
         column-gap: 1em;
         row-gap: 1em;
-        width: 100%;
+        width: 98%;
     }
     .Parc-National-des-Calanques {
         grid-column: 1 / 2;
@@ -664,8 +667,8 @@ footer div {
 @media only screen and (max-width: 767px) {
     body,
     header,
-    #bloc-hébergements,
-    #bloc-activités {
+    #bloc-hebergements,
+    #bloc-activites {
         margin: 0;
         padding: 0;
         width: 100%;
@@ -708,21 +711,21 @@ footer div {
         padding-right: 3em;
         /* doesn't on the parent box because its a link box */
     }
-    .Hébergements {
+    .Hebergements {
         grid-column: 1 / 2;
         grid-row: 2 / 3;
         height: auto;
         width: 100%;
         border-bottom: 3px solid #0065FC;
     }
-    .Activités {
+    .Activites {
         grid-column: 2 / 3;
         grid-row: 2 / 3;
         height: auto;
         width: 100%;
         border-bottom: 3px solid #F2F2F2;
     }
-    .Activités:hover {
+    .Activites:hover {
         border-top: 0;
         border-bottom: 3px solid #0065FC;
     }
@@ -881,7 +884,7 @@ footer div {
     .results-hebergements p {
         font-size: 14px;
     }
-    #bloc-activités {
+    #bloc-activites {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -889,7 +892,7 @@ footer div {
         width: 100%;
         margin: 2em 0 0 0;
     }
-    #bloc-activités h2 {
+    #bloc-activites h2 {
         align-self: flex-start;
         padding-left: 1em;
     }
