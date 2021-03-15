@@ -598,6 +598,9 @@ footer div {
         width: 95%;
         padding-left: 1em;
     }
+    #bloc-hébergements {
+        padding-left: 1em;
+    }
     .bloc-hebergement {
         padding: 1em 0 1em 1em;
         width: 55%;
@@ -619,14 +622,14 @@ footer div {
         margin-top: 4em;
         height: auto;
         padding-left: 1em;
-        width: 95%;
+        width: 97%;
     }
     .results-activites {
         grid-template-columns: 40% 60%;
         grid-template-rows: repeat(4, minmax(10em, 25em));
         column-gap: 1em;
         row-gap: 1em;
-        width: 95%;
+        width: 100%;
     }
     .Parc-National-des-Calanques {
         grid-column: 1 / 2;
