@@ -424,10 +424,6 @@ button {
     color: black;
 }
 
-.results-populaires figcaption p {
-    margin: 0;
-}
-
 .results-populaires i {
     margin-top: 1.5em;
 }
@@ -822,7 +818,7 @@ footer div {
         padding-left: 1.5em;
         font-size: 16px;
     }
-    #bloc-hébergements {
+    #bloc-hebergements {
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
