@@ -3,6 +3,8 @@ body {
     font-size: 12px;
     font-weight: 200;
     width: 100%;
+    max-width: 1440px;
+    margin: 0;
 }
 
 h1,
@@ -123,8 +125,12 @@ nav {
 .form {
     display: flex;
     /* algin on main axis icon, Input and button */
-    height: 3.42em;
-    /* make match the height of the form with its button */
+    height: 3.4em;
+    border-top: 1px solid #F2F2F2;
+    border-bottom: 1px solid #F2F2F2;
+    border-left: none;
+    border-right: none;
+    border-radius: 12px;
 }
 
 .mapIcon {
@@ -139,11 +145,10 @@ nav {
     background-color: #0065FC;
     border-radius: 0 12px 12px 0;
     /* make rounded shape on specific corners */
-    height: 3em;
+    height: auto;
     font-family: 'Raleway';
     color: white;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding: 0 1em;
 }
 
 .btnIcon {
@@ -151,13 +156,10 @@ nav {
 }
 
 .inputCity {
-    border-top: 2px solid #F2F2F2;
-    border-bottom: 2px solid #F2F2F2;
-    border-left: none;
-    border-right: none;
     padding-left: 1em;
     padding-right: 2em;
     font-family: 'Raleway';
+    border: inherit;
 }
 
  ::placeholder {
@@ -576,7 +578,7 @@ footer {
 }
 
 footer div {
-    margin-right: 13em;
+    width: 90%;
     color: black;
 }
 
@@ -751,13 +753,16 @@ footer div {
     }
     .city-selector {
         width: 80%;
-        height: 3.6em;
+        height: auto;
         margin: 0 0 0 2em;
         /* center the form */
         padding: 2em 0;
     }
+    .form {
+        height: 3.2em;
+    }
     .mapIcon {
-        padding: 1em;
+        padding: 0.7em 1em;
         /* center the icon */
         font-size: 18px;
     }
@@ -775,7 +780,7 @@ footer div {
         background-color: #0065FC;
         border-radius: 12px;
         /* make rounded shape on specific corners */
-        height: 3.8em;
+        height: auto;
         color: white;
         padding: 0 1.25em 0 1.25em;
         /* center the icon */
@@ -825,18 +830,14 @@ footer div {
         align-items: center;
         width: 100%;
     }
-    .bloc-hebergement,
-    .Aside-hebergement,
-    .results-populaires,
     .results-hebergements,
-    .results-activites {
-        justify-content: center;
-        align-items: flex-start;
+    .Aside-hebergement,
+    .results-populaires {
         width: 100%;
-        margin: 0;
     }
     .Aside-hebergement {
         border-radius: 0;
+        margin: 0;
     }
     .hebergement-populaires-title {
         display: flex;
@@ -847,7 +848,6 @@ footer div {
     .results-populaires a,
     .results-activites a {
         width: 90%;
-        margin-left: 1em;
     }
     .results-populaires figure {
         height: 10em;
@@ -870,7 +870,6 @@ footer div {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         margin-bottom: 1em;
         width: 100%;
     }
