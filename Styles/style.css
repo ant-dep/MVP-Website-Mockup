@@ -727,6 +727,10 @@ footer div {
         border-top: 0;
         border-bottom: 3px solid #0065FC;
     }
+    .Activites:hover,
+    .Hebergements:hover {
+        border-top: none;
+    }
     .Inscription {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
