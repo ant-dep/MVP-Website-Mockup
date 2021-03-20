@@ -1,7 +1,7 @@
 body {
     font-family: 'Raleway', sans-serif;
     font-size: 12px;
-    font-weight: 200;
+    font-weight: 400;
     width: 100%;
     max-width: 1440px;
     margin: 0;
@@ -19,12 +19,6 @@ h4 {
     font-weight: 600;
 }
 
-header {
-    width: 90%;
-    padding-left: 3em;
-    margin-bottom: 3em;
-}
-
 a,
 ul,
 li {
@@ -39,22 +33,23 @@ ul a {
     /* for footer li */
 }
 
-nav a {
-    color: #0065FC;
-    /* change the color of links in Nav block */
-    font-weight: 300;
-    font-size: 11px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    /* move them to the bottom */
-    height: 6em;
-    /* make bigger box around the elements for hoover effect */
+.Inscription p,
+.btn,
+.inputCity {
+    font-family: 'Raleway';
+    font-weight: 700;
+    /* make bold "S'inscrire" and buttons */
+}
+
+header {
+    width: 95%;
+    padding-left: 3em;
+    margin-bottom: 3em;
 }
 
 nav {
     display: grid;
-    grid-template-columns: 60% 1fr 1fr 1fr;
+    grid-template-columns: 70% 1fr 1fr 1fr;
     width: 100%;
     height: 6em;
     /* to have space for the line when hoover */
@@ -83,12 +78,17 @@ nav {
     grid-row: 1 / 2;
 }
 
-.Inscription p,
-.btn,
-.inputCity {
-    font-family: 'Raleway';
-    font-weight: 700;
-    /* make bold "S'inscrire" and buttons */
+nav a {
+    color: #0065FC;
+    /* change the color of links in Nav block */
+    font-weight: 300;
+    font-size: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* move them to the bottom */
+    height: 6em;
+    /* make bigger box around the elements for hoover effect */
 }
 
 .Hebergements:hover,
@@ -264,7 +264,7 @@ button {
     height: 100%;
     padding-left: 3em;
     /* free space on left side */
-    width: 90%;
+    width: 95%;
 }
 
 .bloc-hebergement {
@@ -274,14 +274,14 @@ button {
     align-items: flex-start;
     background-color: #F2F2F2;
     height: auto;
-    width: 70%;
+    width: 65%;
     border-radius: 20px;
-    padding-left: 2em;
+    padding: 0 2em;
 }
 
 .results-hebergements {
     display: grid;
-    grid-template-columns: repeat( auto-fill, minmax(5em, 18em));
+    grid-template-columns: repeat( 3, minmax(5em, 18em));
     column-gap: 1em;
     row-gap: 1.5em;
     margin-bottom: 2em;
@@ -351,7 +351,7 @@ button {
     overflow: hidden;
     object-fit: cover;
     /* The image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit */
-    border-radius: 12px 12px 0 0;
+    border-radius: 16px 16px 0 0;
 }
 
 .btnAfficher-plus button {
@@ -364,7 +364,7 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     background-color: #F2F2F2;
     border-radius: 20px;
     margin-left: 2em;
@@ -392,6 +392,7 @@ button {
     width: 80%;
     /* doesn't take the specs from figure because it's the parent but can't be handle like a figure -> link 
     wouldn't be useful with grid layout be not necessary with 3 elements */
+    height: 10em;
 }
 
 .results-populaires figure {
@@ -400,7 +401,7 @@ button {
     background-color: white;
     box-shadow: 2px 3px 3px lightgrey;
     height: 8em;
-    margin: 2em 0;
+    margin: 0;
     padding: 4px;
     border-radius: 20px;
 }
@@ -412,7 +413,7 @@ button {
     height: 100%;
     overflow: hidden;
     object-fit: cover;
-    border-radius: 12px 0 0 12px;
+    border-radius: 16px 0 0 16px;
     /* specific border-radius angle */
 }
 
@@ -436,15 +437,15 @@ button {
     justify-content: center;
     align-items: flex-start;
     padding-left: 3em;
-    width: 90%;
+    width: 95%;
     height: auto;
-    margin-top: 3em;
+    margin: 3em 0;
 }
 
 .results-activites {
     display: grid;
-    grid-template-columns: repeat( auto-fill, minmax(10em, 20em));
-    column-gap: 3em;
+    grid-template-columns: repeat( auto-fill, minmax(6em, 30em));
+    column-gap: 2em;
     row-gap: 2em;
     width: 100%;
     height: auto;
@@ -490,10 +491,10 @@ button {
 .Parc-National-des-Calanques figure {
     display: flex;
     flex-direction: column;
-    border-radius: 15px;
+    border-radius: 20px;
     color: black;
     font-weight: 400;
-    height: 28em;
+    height: 35em;
     width: 100%;
     overflow: hidden;
     margin: 0;
@@ -503,10 +504,10 @@ button {
 .Iles-du-Frioul figure {
     display: flex;
     flex-direction: column;
-    border-radius: 15px;
+    border-radius: 20px;
     color: black;
     font-weight: 400;
-    height: 11em;
+    height: 15em;
     width: 100%;
     overflow: hidden;
     margin: 0;
@@ -517,10 +518,10 @@ button {
 .Fort-de-Pomegues figure {
     display: flex;
     flex-direction: column;
-    border-radius: 15px;
+    border-radius: 20px;
     color: black;
     font-weight: 400;
-    height: 14em;
+    height: 17em;
     width: 100%;
     overflow: hidden;
     margin: 0;
@@ -534,7 +535,7 @@ button {
     border-radius: 20px;
     color: black;
     font-weight: 400;
-    height: 11.5em;
+    height: 16em;
     width: 100%;
     overflow: hidden;
     margin: 0;
@@ -548,7 +549,7 @@ button {
     height: 100%;
     overflow: hidden;
     object-fit: cover;
-    border-radius: 12px 12px 0 0;
+    border-radius: 16px 16px 0 0;
 }
 
 .Notre-Dame-de-la-Garde img {
@@ -567,22 +568,20 @@ button {
 footer {
     display: flex;
     justify-content: space-between;
-    align-content: center;
     background-color: #F2F2F2;
     background-size: cover;
-    margin-top: 3em;
-    padding-top: 3em;
+    padding: 3em 0;
     line-height: 2em;
     height: 12em;
     width: 100%;
 }
 
 footer div {
-    width: 90%;
+    width: 25%;
     color: black;
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     body,
     header,
     #bloc-hebergements,
@@ -603,24 +602,29 @@ footer div {
         padding-left: 1em;
     }
     .bloc-hebergement {
-        padding: 1em 0 1em 1em;
-        width: 55%;
+        padding: 2em 3em;
+        width: 50%;
     }
     .results-hebergements {
         display: grid;
-        grid-template-columns: repeat( auto-fill, minmax(5em, 15em));
+        grid-template-columns: repeat(2, minmax(5em, 15em));
     }
     .Aside-hebergement {
         justify-content: flex-start;
         width: 40%;
-        margin: 0 1em;
+        margin: 0 1em 0 3em;
+    }
+    .results-populaires {
+        display: flex;
+        justify-content: space-around;
+        height: 80%;
     }
     .results-populaires figcaption {
         font-size: 10px;
         line-height: 10px;
     }
     #bloc-activites {
-        margin-top: 4em;
+        margin: 4em 0;
         height: auto;
         padding-left: 1em;
         width: 97%;
@@ -652,10 +656,6 @@ footer div {
     footer {
         margin: 0;
         line-height: 20px;
-        width: 100%;
-    }
-    footer div {
-        margin-right: 6em;
     }
 }
 
@@ -671,7 +671,7 @@ footer div {
         padding: 0;
         width: 100%;
         height: auto;
-        font-size: 14px;
+        font-size: 12px;
     }
     h1,
     h2 {
@@ -681,6 +681,7 @@ footer div {
     h4,
     .btnAfficher-plus button {
         font-size: 16px;
+        margin: 0.5em 0;
     }
     nav a {
         font-size: 16px;
@@ -748,7 +749,7 @@ footer div {
         padding-top: 1em;
         padding-left: 1.5em;
         line-height: 25px;
-        width: 80%;
+        width: 90%;
     }
     .titre-header p {
         font-size: 15px;
@@ -756,7 +757,7 @@ footer div {
         margin: 0;
     }
     .city-selector {
-        width: 80%;
+        width: 85%;
         height: auto;
         margin: 0 0 0 2em;
         /* center the form */
@@ -766,7 +767,7 @@ footer div {
         height: 3.2em;
     }
     .mapIcon {
-        padding: 0.7em 1em;
+        padding: 0.5em 1em 0 1em;
         /* center the icon */
         font-size: 18px;
     }
@@ -854,20 +855,18 @@ footer div {
         width: 90%;
     }
     .results-populaires figure {
-        height: 10em;
+        height: 8em;
     }
     .results-populaires img {
         width: 80%;
     }
     .results-populaires figcaption {
-        font-size: 12px;
-        line-height: 20px;
-        padding-right: 2em;
+        line-height: 14px;
+        padding-right: 1em;
     }
     .bloc-hebergement {
         padding: 0;
         width: 90%;
-        margin-left: 1.25em;
         background-color: white;
     }
     .results-hebergements {
@@ -878,7 +877,8 @@ footer div {
         width: 100%;
     }
     .results-hebergements figure {
-        width: 90%;
+        height: 13em;
+        width: 95%;
     }
     .results-hebergements p {
         font-size: 14px;
@@ -912,13 +912,13 @@ footer div {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        margin: 2em 0 0 0;
-        padding: 2em 0 0 0;
-        height: 35em;
+        padding: 2em 0;
+        height: auto;
         width: 100%;
     }
     footer div {
         margin: 0;
+        width: 100%;
     }
     footer ul {
         padding: 0 2em;
