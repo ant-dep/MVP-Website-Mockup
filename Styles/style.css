@@ -376,7 +376,7 @@ button {
     justify-content: space-between;
     align-items: center;
     width: 80%;
-    padding: 1em;
+    padding: 0 1em;
 }
 
 .results-populaires {
@@ -384,7 +384,7 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 5em;
+    padding-bottom: 3em;
     width: 100%;
     height: auto;
 }
