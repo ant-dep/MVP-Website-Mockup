@@ -842,7 +842,7 @@ footer div {
     }
     .Aside-hebergement {
         border-radius: 0;
-        margin: 0;
+        margin: 2em 0;
     }
     .hebergement-populaires-title {
         display: flex;
@@ -880,6 +880,9 @@ footer div {
         height: 13em;
         width: 95%;
     }
+    .results-hebergements figcaption {
+        height: 5em;
+    }
     .results-hebergements p {
         font-size: 14px;
     }
@@ -889,7 +892,7 @@ footer div {
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin: 2em 0 0 0;
+        margin: 2em 0;
     }
     #bloc-activites h2 {
         align-self: flex-start;
