@@ -260,9 +260,7 @@ button {
     display: flex;
     justify-content: space-between;
     height: 100%;
-    padding-left: 3em;
-    /* free space on left side */
-    width: 93%;
+    margin: 3em;
 }
 
 .bloc-hebergement {
@@ -274,7 +272,7 @@ button {
     height: auto;
     width: 55%;
     border-radius: 20px;
-    padding: 0 2em;
+    padding: 2em;
 }
 
 .results-hebergements {
@@ -366,6 +364,7 @@ button {
     background-color: #F2F2F2;
     border-radius: 20px;
     margin-left: 3em;
+    padding: 2em 0;
     width: 40%;
 }
 
@@ -435,10 +434,8 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-left: 3em;
-    width: 93%;
     height: auto;
-    margin: 3em 0;
+    margin: 3em;
 }
 
 .results-activites {
@@ -593,7 +590,7 @@ footer div {
         padding-left: 1em;
     }
     #bloc-hebergements {
-        padding-left: 2em;
+        margin: 1em;
     }
     .bloc-hebergement {
         padding: 1em 3em;
@@ -697,7 +694,8 @@ footer div {
         width: 100%;
         height: auto;
         font-size: 12px;
-        padding-left: 0;
+        padding: 0;
+        margin: 0;
     }
     h1,
     h2 {
@@ -863,12 +861,12 @@ footer div {
     .Aside-hebergement,
     .results-populaires {
         width: 100%;
-        height: 40em;
+        height: 42em;
     }
     .Aside-hebergement {
         border-radius: 0;
         margin: 0;
-        padding-bottom: 4em;
+        padding-bottom: 2em;
     }
     .results-populaires {
         justify-content: space-between;
