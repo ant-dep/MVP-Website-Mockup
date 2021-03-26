@@ -1,7 +1,5 @@
 body {
-    font-family: 'Raleway', sans-serif;
-    font-size: 12px;
-    font-weight: 400;
+    font: 400 12px 'Raleway', sans-serif;
     width: 100%;
     max-width: 1440px;
     margin: 0;
@@ -33,7 +31,7 @@ ul a {
     /* for footer li */
 }
 
-.Inscription p,
+.Inscription,
 .btn,
 .inputCity {
     font-family: 'Raleway';
@@ -96,11 +94,11 @@ nav a {
     border-top: 2px solid #0065FC;
 }
 
-.Activites p:hover {
+.Activites:hover {
     color: #0065FC;
 }
 
-.Activites p {
+.Activites a {
     color: black;
 }
 
@@ -264,7 +262,7 @@ button {
     height: 100%;
     padding-left: 3em;
     /* free space on left side */
-    width: 95%;
+    width: 93%;
 }
 
 .bloc-hebergement {
@@ -437,7 +435,7 @@ button {
     justify-content: center;
     align-items: flex-start;
     padding-left: 3em;
-    width: 95%;
+    width: 93%;
     height: auto;
     margin: 3em 0;
 }
@@ -450,6 +448,10 @@ button {
     width: 100%;
     height: auto;
     padding-bottom: 1em;
+}
+
+#bloc-activites h2 {
+    padding-left: 0.4em;
 }
 
 .results-activites figcaption {
@@ -581,25 +583,16 @@ footer div {
     color: black;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    body,
-    header,
-    #bloc-hebergements,
-    .Aside-hebergement,
-    #bloc-activites {
-        width: 100%;
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    body {
         margin: 0;
-        height: auto;
-        /* thin free space aroung main elements */
         padding: 0;
     }
     header {
-        width: 95%;
         padding-left: 1em;
     }
     #bloc-hebergements {
-        width: 98%;
-        padding-left: 1em;
+        padding-left: 2em;
     }
     .bloc-hebergement {
         padding: 2em 3em;
@@ -667,11 +660,10 @@ footer div {
     header,
     #bloc-hebergements,
     #bloc-activites {
-        margin: 0;
-        padding: 0;
         width: 100%;
         height: auto;
         font-size: 12px;
+        padding-left: 0;
     }
     h1,
     h2 {
@@ -687,8 +679,7 @@ footer div {
         font-size: 16px;
         height: auto;
         width: 100%;
-        padding: 0;
-        margin: 0;
+        padding: 1em 0;
     }
     nav {
         display: grid;
@@ -835,14 +826,18 @@ footer div {
         align-items: center;
         width: 100%;
     }
-    .results-hebergements,
     .Aside-hebergement,
     .results-populaires {
         width: 100%;
+        height: 40em;
     }
     .Aside-hebergement {
         border-radius: 0;
         margin: 0;
+        padding-bottom: 4em;
+    }
+    .results-populaires {
+        justify-content: space-between;
     }
     .hebergement-populaires-title {
         display: flex;
@@ -855,14 +850,14 @@ footer div {
         width: 90%;
     }
     .results-populaires figure {
-        height: 8em;
+        height: 10em;
     }
     .results-populaires img {
-        width: 80%;
+        width: 70%;
     }
     .results-populaires figcaption {
         line-height: 14px;
-        padding-right: 1em;
+        padding: 1em 2em;
     }
     .bloc-hebergement {
         padding: 0;
@@ -877,7 +872,7 @@ footer div {
         width: 100%;
     }
     .results-hebergements figure {
-        height: 13em;
+        height: 15em;
         width: 95%;
     }
     .results-hebergements p {
@@ -901,11 +896,15 @@ footer div {
         width: 90%;
     }
     .results-activites figure {
-        height: 12em;
+        height: 15em;
         width: 100%;
         margin: 0;
         padding: 0;
         box-shadow: 0 5px 5px lightgrey;
+    }
+    .results-activites figcaption {
+        height: 5em;
+        font-size: 14px;
     }
     footer {
         display: flex;
