@@ -272,7 +272,7 @@ button {
     align-items: flex-start;
     background-color: #F2F2F2;
     height: auto;
-    width: 65%;
+    width: 55%;
     border-radius: 20px;
     padding: 0 2em;
 }
@@ -361,20 +361,20 @@ button {
 .Aside-hebergement {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: #F2F2F2;
     border-radius: 20px;
-    margin-left: 2em;
-    width: 30%;
+    margin-left: 3em;
+    width: 40%;
 }
 
 .hebergement-populaires-title {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: 1em;
+    width: 80%;
+    padding: 0 1em;
 }
 
 .results-populaires {
@@ -382,6 +382,7 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 3em;
     width: 100%;
     height: auto;
 }
@@ -595,7 +596,7 @@ footer div {
         padding-left: 2em;
     }
     .bloc-hebergement {
-        padding: 2em 3em;
+        padding: 1em 3em;
         width: 50%;
     }
     .results-hebergements {
@@ -605,16 +606,49 @@ footer div {
     .Aside-hebergement {
         justify-content: flex-start;
         width: 40%;
-        margin: 0 1em 0 3em;
+        padding: 1em 0;
+        margin-left: 2em;
+    }
+    .hebergement-populaires-title {
+        padding: 0;
     }
     .results-populaires {
         display: flex;
-        justify-content: space-around;
-        height: 80%;
+        justify-content: space-between;
+        align-items: center;
+        height: 77%;
+    }
+    .results-populaires a {
+        width: 75%;
+    }
+    .Aside-hebergement figure {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border: 1px solid #F2F2F2;
+        box-shadow: 2px 3px 3px lightgrey;
+        border-radius: 20px;
+        height: 13em;
+        width: 95%;
+        padding: 4px;
+        margin: 0;
     }
     .results-populaires figcaption {
+        height: 35%;
+        padding-left: 1em;
+        padding-bottom: 1em;
+        padding-top: 0.5em;
+        font-weight: 100;
         font-size: 10px;
         line-height: 10px;
+    }
+    .results-populaires img {
+        border-radius: 16px 16px 0 0;
+    }
+    .results-populaires i,
+    .results-populaires h3,
+    .results-populaires p {
+        margin: 0.3em 0;
     }
     #bloc-activites {
         margin: 4em 0;
@@ -844,10 +878,16 @@ footer div {
         justify-content: space-between;
         align-items: center;
         width: 90%;
+        padding: 0 1em;
     }
     .results-populaires a,
     .results-activites a {
         width: 90%;
+    }
+    .results-populaires {
+        justify-content: space-around;
+        padding-bottom: 2em;
+        height: 100%;
     }
     .results-populaires figure {
         height: 10em;
@@ -875,6 +915,9 @@ footer div {
         height: 15em;
         width: 95%;
     }
+    .results-hebergements figcaption {
+        height: 5em;
+    }
     .results-hebergements p {
         font-size: 14px;
     }
@@ -884,7 +927,7 @@ footer div {
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin: 2em 0 0 0;
+        margin: 2em 0;
     }
     #bloc-activites h2 {
         align-self: flex-start;
