@@ -343,6 +343,14 @@ button {
     color: black;
 }
 
+.plain-star {
+    color: #0065FC;
+}
+
+.empty-star {
+    color: #F2F2F2;
+}
+
 .results-hebergements img {
     min-width: 0;
     min-height: 0;
