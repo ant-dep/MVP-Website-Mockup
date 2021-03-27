@@ -2,7 +2,7 @@ body {
     font: 400 12px 'Raleway', sans-serif;
     width: 100%;
     max-width: 1440px;
-    margin: 0;
+    margin: auto;
 }
 
 h1,
@@ -132,10 +132,14 @@ nav a {
 }
 
 .mapIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #F2F2F2;
     border-radius: 12px 0 0 12px;
-    padding: 1.25em;
+    padding: 1em;
     /* center the icon within its grey circle */
+    font-size: 18px;
     color: black;
 }
 
